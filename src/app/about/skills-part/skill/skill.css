@@ -1,0 +1,82 @@
+/*——————————————————TRANSITION———————————————————*/
+
+.skill .content .container, .skill .top{
+    transition: all 1s;
+}
+
+/*——————————————————STYLES———————————————————*/
+.skill, .skill .content .container{
+    height:550px;
+    width:290px;  
+}
+
+.skill{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill .content{
+    width:290px;  
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:var(--two-xs-size);
+}
+
+.skill .content .container{
+    max-height:140px;
+    overflow: hidden;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap:var(--two-xs-size);
+}
+
+/*——————————DEVELOPPED——————————-*/
+
+.skill.developped .top .round-btn{
+    transform:rotate(-90deg);
+}
+
+.skill.developped .content .container{  
+    max-height:1000px;
+}
+
+/*——————————CONTENT——————————-*/
+
+.skill .top{
+    display:flex;
+    align-items: center;
+    padding:var(--s-size);
+    border-radius: var(--s-size);
+}
+
+.skill .top:hover{
+    background-color:var(--dark-grey-color);
+}
+
+.skill .round-btn{
+    transform:rotate(90deg);
+    transition: all 0.3s;
+}
+
+.skill .round-btn .loading{
+    transform:rotate(-90deg);
+}
+
+.skill .skill-icon .loading{
+    width:100px;
+    height:100px;
+}
+
+.skill .desc-title{
+    font-weight: bold;
+}
+
+.skill p{
+    font-weight:600;
+}

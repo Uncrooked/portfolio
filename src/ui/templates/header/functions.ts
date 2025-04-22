@@ -1,0 +1,50 @@
+function setBurger(){
+    const menuBtn = document.getElementById("menu-btn")
+    const roundBtns = menuBtn?.getElementsByClassName("round-btn");
+    
+    if(roundBtns){
+        for(let btn of roundBtns){
+            btn?.classList.toggle("display-none");
+        }
+    }
+}
+
+function changeOverlay(toggle = true,overlayEl:HTMLElement,body:HTMLElement){
+    overlayEl?.animate([
+        {transform:"translateY(0)"},
+        {transform:"translateY(100vh)"}
+    ],{
+        duration:500,
+        easing:"ease-out"
+    })
+
+    setTimeout(() => {
+        const overlayEl = document.getElementById("overlay");
+        const currentAction = toggle ? "toggle" : "add";
+        overlayEl?.classList[currentAction]("display-none");
+        body?.classList[currentAction]("display-overlay");
+    },450);
+}
+
+export function setOverlay(){
+    const body = document.getElementsByTagName("body")[0];
+    const overlayEl = document.getElementById("overlay");
+    if(overlayEl){
+        if(!Array.from(overlayEl.classList).includes("display-none")){
+            changeOverlay(true,overlayEl,body);
+        }else{
+            overlayEl?.classList.toggle("display-none");
+            body?.classList.toggle("display-overlay");
+        }
+        setBurger();
+    }
+}
+
+export function removeHeader(){
+    const overlayEl = document.getElementById("overlay");
+    const body = document.getElementsByTagName("body")[0];
+    if(overlayEl && !overlayEl.classList[1]){
+        setBurger();
+        changeOverlay(false,overlayEl,body);
+    }
+}

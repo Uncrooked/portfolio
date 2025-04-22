@@ -1,0 +1,25 @@
+#contact .right{
+    height:500px;
+    border-radius:var(--l-size);
+    background:linear-gradient(var(--white-color),var(--light-purple-color));
+    padding:var(--l-size);
+    
+    display:flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+}
+
+#contact .right canvas{
+    max-width:100%;
+}
+
+
+#contact .info h2, #contact .info p{
+    color:var(--light-red-color);
+}
+
+#contact .info p{
+    font-weight:bold;
+    font-size:var(--h6-font-size);
+}

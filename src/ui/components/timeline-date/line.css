@@ -1,0 +1,18 @@
+.line{
+    width:100%;
+    height:4px;
+    background-color: var(--light-blue-color);
+    margin-block:var(--m-size);
+    display: flex;
+    align-items: center;
+}
+
+.line::before{
+    content:" ";
+    display:block;
+    width:35px;
+    height:35px;
+    background-color:var(--black-color);
+    border:solid 4px var(--light-blue-color);
+    border-radius: var(--xl-size);
+}

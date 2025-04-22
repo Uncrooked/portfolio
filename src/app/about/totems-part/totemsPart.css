@@ -1,0 +1,100 @@
+#totems-part{
+    position:relative;
+}
+
+#totems-part .canvas{
+   position:absolute !important;
+   top:0;
+   left:0;
+   z-index: 1;
+}
+
+#totems-part .overlay{
+    position: relative;
+    width:100vw;
+    height:100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    z-index:2;
+    pointer-events: none;
+}
+
+#totems-part .overlay .btns{
+    position:relative;
+    width:660px;
+}
+
+#totems-part .overlay .btns li{
+    position:absolute;
+    z-index:3;
+    pointer-events: all;
+    top:200px;
+    padding-top:20px;
+}
+
+#totems-part .overlay .btns li .btn{
+    position:relative;
+    bottom:0;
+    opacity: 1;
+    transition:all 0.3s;
+}
+
+#totems-part .overlay .btns li .btn.no-opac{
+    opacity: 0;
+    bottom:-5px;
+}
+
+#totems-part .overlay .first{
+    left:0;
+}
+
+#totems-part .overlay .second{
+    left:calc(50% - 30px);
+}
+
+#totems-part .overlay .third{
+    right:0;
+}
+
+/*———————data overlay————————*/
+
+#totems-part .data-overlay{
+    padding-block:var(--three-xl-size);
+    display:flex;
+    flex-direction: column;
+    align-items: end;
+    width:100%;
+    height:100%;
+}
+
+#totems-part .data-overlay .icon{
+    align-self: start;
+    pointer-events: all;
+    padding:20px;
+    background-color:var(--grey-color);
+    border-radius:var(--xl-size);
+    transition:all 0.3s;
+}
+
+#totems-part .data-overlay .icon:hover{
+    background-color:var(--dark-grey-color);
+}
+
+
+#totems-part .data-overlay .content{
+    max-width:700px;
+    height:100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:var(--m-size);
+}
+
+/*———————————————————————RESPONSIVE————————————————————————————*/
+
+@media(max-width:1024px){
+    #totems-part{
+        display:none;
+    }
+}

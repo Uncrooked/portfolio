@@ -1,0 +1,38 @@
+#banner{
+    width:100vw;
+    height:300px;
+
+    padding-bottom:var(--xl-size);
+
+    background-image: var(--banner-bg);
+    background-size:cover;
+
+    display:flex;
+    align-items: end;
+}
+
+#banner h1{
+    font-size:50px;
+}
+
+#banner p.sub-title{
+    font-size:var(--h4-font-size);
+}
+
+/*————————————————RESPONSIVE——————————————————-*/
+
+@media(max-width:425px){
+
+    #banner{
+        height:200px;
+        padding-bottom:var(--m-size);
+    }
+
+    #banner h1.title{
+        font-size:var(--h2-font-size);
+    }
+
+    #banner div .sub-title{
+        font-size:var(--h6-font-size);
+    }
+}

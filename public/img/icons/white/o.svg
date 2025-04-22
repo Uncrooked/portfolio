@@ -1,0 +1,18 @@
+<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_21_4768)">
+<rect opacity="0.111111" width="21.406" height="21.5493" transform="matrix(-0.809327 -0.587358 0.588213 -0.808706 17.3242 30)" fill="white"/>
+<rect opacity="0.222222" width="19.8917" height="20.0492" transform="matrix(-0.588213 -0.808706 0.809327 -0.587358 12.7373 28.9307)" fill="white"/>
+<rect opacity="0.333333" width="18.3796" height="18.5469" transform="matrix(-0.309328 -0.950956 0.951157 -0.308706 9.02246 26.6016)" fill="white"/>
+<rect opacity="0.444444" x="6.48047" y="23.4375" width="16.8713" height="17.0409" transform="rotate(-90 6.48047 23.4375)" fill="white"/>
+<rect opacity="0.555556" width="15.3666" height="15.5312" transform="matrix(0.309328 -0.950956 0.951157 0.308706 5.2373 19.9109)" fill="white"/>
+<rect opacity="0.666667" width="13.8639" height="14.0194" transform="matrix(0.588213 -0.808706 0.809327 0.587358 5.25 16.4905)" fill="white"/>
+<rect opacity="0.777778" width="12.3612" height="12.5076" transform="matrix(0.809327 -0.587358 0.588213 0.808706 6.31934 13.5718)" fill="white"/>
+<rect opacity="0.888889" width="10.8567" height="10.9976" transform="matrix(0.951157 -0.308706 0.309328 0.950956 8.13574 11.4478)" fill="white"/>
+<rect x="10.3262" y="10.2539" width="9.34985" height="9.4901" fill="white"/>
+</g>
+<defs>
+<clipPath id="clip0_21_4768">
+<rect width="30" height="30" fill="white"/>
+</clipPath>
+</defs>
+</svg>

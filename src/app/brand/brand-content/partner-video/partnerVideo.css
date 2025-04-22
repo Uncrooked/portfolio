@@ -1,0 +1,33 @@
+.partner-video{
+    display:flex;
+    flex-wrap:wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap:var(--l-size);
+    padding:var(--l-size);
+    background-color:var(--very-dark-grey-color);
+    border-radius:var(--m-size);
+}
+
+.partner-video .left{
+    display:grid;
+    gap:var(--s-size);
+}
+
+.partner-video .left .sub-title{
+    font-weight: bold;
+    font-size:var(--xl-font-size);
+}
+
+.partner-video iframe{
+    border-radius:var(--s-size);
+}
+
+/*—————————————————————RESPONSIVE———————————————————————-*/
+
+@media(max-width:425px){
+    .partner-video{
+        padding-inline:var(--two-xs-size);
+        justify-content: center;
+    }
+}

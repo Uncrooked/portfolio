@@ -1,0 +1,48 @@
+#summary{
+    background-color:var(--white-color-midopac);
+    width:fit-content;
+    max-width:800px;
+    padding:var(--s-size);
+    border-radius:var(--m-size);
+    z-index:1;
+}
+
+#summary h1{
+    font-size:56px;
+}
+
+#summary h2{
+    font-weight:400;
+    font-size:var(--h4-font-size);
+    margin-bottom:var(--xs-size);
+}
+
+#summary p{
+    font-size:18px;
+    margin-bottom:var(--s-size);
+}
+
+#summary .btns{
+    display:flex;
+    gap:var(--xs-size);
+}
+
+/*———————————————————————RESPONSIVE————————————————————————-*/
+
+@media(max-width:425px){
+    #summary h1{
+        font-size:var(--h1-font-size);
+    }
+
+    #summary .btns{
+        gap:var(--three-xs-font-size);
+        flex-direction: column;
+    }
+
+    #summary .btns .btn{
+        width:100%;
+        text-align: center;
+    }
+}
+
+/*—————————————————————————————————————————————————————————-*/

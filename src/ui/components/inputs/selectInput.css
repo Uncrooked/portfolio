@@ -1,0 +1,38 @@
+.select-input label{
+    display:none;
+}
+
+.select-input{
+    font-weight:600;
+    font-size:var(--l-font-size);
+}
+
+.select-input select{
+    font-weight:600;
+    font-size:var(--l-font-size);
+}
+
+.select-input select::picker(select){
+    font-size:var(--m-font-size);
+}
+
+.select-input select,
+.select-input select::picker(select){
+    appearance: base-select;
+    border-radius:0;
+    padding-left:0;
+}
+
+.select-input select option{
+    padding:var(--xs-size);
+}
+
+.select-input select::picker(select){
+    position:absolute;
+    border:none;
+    padding:var(--two-xs-size);
+    backdrop-filter: blur(50px);
+    background-color:rgba(0,0,0,0.5);
+    margin-top:var(--s-size);
+    top:anchor(bottom);
+}

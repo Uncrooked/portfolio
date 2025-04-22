@@ -1,0 +1,57 @@
+// prisma/schema.prisma
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Categories {
+  id              Int     @id @default(autoincrement())
+  name            String   @db.VarChar(64)
+  slug            String   @db.VarChar(64)
+  color           String  @db.VarChar(64)
+  projects        Projects[]
+}
+
+model Tags {
+  id              Int      @id @default(autoincrement())
+  name            String   @db.VarChar(64)
+  slug            String   @db.VarChar(64)
+  tags_join       TagsJoin[]
+}
+
+model TagsJoin {
+  project_id Int
+  tag_id     Int
+
+  projects    Projects @relation(fields: [project_id], references: [id])
+  tags        Tags     @relation(fields: [tag_id], references: [id])
+
+  @@id([project_id, tag_id])
+}
+
+
+model Projects {
+  id              Int      @id @default(autoincrement())
+  category_id     Int
+  thumbnail_id    Int
+  name            String      @db.VarChar(64)
+  slug            String      @db.VarChar(64)
+  url             String      @db.VarChar(128)
+  thumbnail       Thumbnails  @relation(fields: [thumbnail_id], references: [id])
+  category        Categories  @relation(fields: [category_id], references: [id])
+  tags_join       TagsJoin[]
+}
+
+model Thumbnails {
+  id              Int      @id @default(autoincrement())
+  path            String   @db.VarChar(128)
+  alt             String   @db.VarChar(128)
+  width           Int
+  height          Int
+  projects        Projects[]
+}

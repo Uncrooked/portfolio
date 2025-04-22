@@ -1,0 +1,27 @@
+#contact{
+    background: url("/img/backgrounds/background-purple.webp");
+    background-size: cover;
+    background-position: center;
+}
+
+#contact .main{
+    padding-block:var(--three-xl-size);
+}
+
+#contact .main .main-content{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:var(--xl-size);
+}
+
+/*—————————————————RESPONSIVE——————————————————-*/
+
+@media(max-width:1024px){
+    #contact{
+        background:var(--black-color);
+    }
+
+    #contact .main .main-content{
+        grid-template-columns: 1fr;
+    }
+}

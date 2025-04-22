@@ -1,0 +1,5 @@
+.content-video ul{
+    padding-block:var(--two-xl-size);
+    display:grid;
+    gap:var(--two-xl-size);
+}

@@ -1,0 +1,24 @@
+.filters{
+    display:flex;
+    align-items: start;
+    gap:var(--two-xs-size);
+    padding-block:var(--xl-size);
+    overflow-x: scroll;
+}
+
+.filters::-webkit-scrollbar{
+    display:none;
+}
+
+.filters .btn{
+    min-width:fit-content;
+    text-wrap:nowrap;
+}
+
+/*——————————————————RESPONSIVE———————————————————-*/
+
+@media(max-width:425px){
+    .filters{
+        padding-bottom:var(--xs-size);
+    }
+}

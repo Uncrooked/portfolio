@@ -1,0 +1,38 @@
+#sentence-part{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:var(--l-size);
+    padding-block: var(--four-xl-size) var(--three-xl-size);
+}
+
+#sentence-part ul.sentence{
+    display:flex;
+    flex-wrap:wrap;
+    gap:var(--three-xs-size);
+}
+
+#sentence-part ul.sentence li.word{
+    font-size:var(--h2-font-size);
+    font-weight:400;
+    color:var(--grey-color);
+}
+
+#sentence-part ul.sentence li.word.bold{
+    font-weight:bold;
+    color:var(--white-color);
+}
+
+/*——————————————————RESPONSIVE————————————————————*/
+
+@media (max-width:425px){
+    #sentence-part ul.sentence li.word{
+        font-size:var(--h4-font-size);
+    }
+
+    #sentence-part i.icon{
+        width:100px;
+    }
+}
+
+/*————————————————————————————————————————————————*/

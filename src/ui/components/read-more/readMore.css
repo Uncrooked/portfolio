@@ -1,0 +1,41 @@
+.read-more{
+    overflow: visible;
+}
+
+.read-more .content{
+    position:relative;
+    overflow: hidden;
+}
+
+.read-more .content::after{
+    content:" ";
+    display:block;
+    height:50px;
+    width:100%;
+    background: linear-gradient(360deg,var(--black-color) 20%,transparent);
+    position:absolute;
+    bottom:0;
+}
+
+.read-more .content.develop{
+    height:fit-content !important;
+    background-color:var(--black-color);
+}
+
+.read-more .content.develop::after{
+    display:none;
+}
+
+.read-more button{
+    background-color: transparent;
+    border:none;
+    font-size:var(--m-font-size);
+    padding:var(--two-xs-size);
+    border-radius:var(--three-xs-size);
+    margin-top:var(--three-xs-size);
+    transition:all 0.3s;
+}
+
+.read-more button:hover{
+    background-color:var(--dark-grey-color);
+}

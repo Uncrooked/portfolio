@@ -1,0 +1,21 @@
+.timeline-date{
+    min-width:80vw;
+    margin-block:var(--two-xl-size) var(--three-xl-size);
+}
+
+.timeline-date h3{
+    font-size:var(--xl-font-size);
+}
+
+.timeline-date .content{
+    max-width:600px;
+}
+
+.timeline-date .content h4{
+    font-size:var(--l-font-size);
+    margin-bottom:var(--three-xs-size);
+}
+
+.timeline-date .content p{
+    font-size:var(--m-font-size);
+}

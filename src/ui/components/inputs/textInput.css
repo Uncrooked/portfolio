@@ -1,0 +1,14 @@
+.text-input{
+    position:relative;
+}
+
+.text-input label{
+    position:absolute;
+    top:var(--s-size);
+    font-weight:600;
+    transition:all 0.3s;
+}
+
+.text-input input:focus + label{
+    top:-10px;
+}

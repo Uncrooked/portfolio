@@ -1,0 +1,50 @@
+#hero-part.background{
+    width:100vw;
+    height:var(--full-height);
+
+    background:url("/img/backgrounds/background-dark-blue.webp");
+    background-size:cover;
+}
+
+#hero-part .content{
+    display:flex;
+    flex-wrap:wrap;
+    align-items: end;
+    height:100%;
+    padding-block:var(--xl-size);
+    position:relative;
+}
+
+#hero-part .slider{
+    position:absolute;
+    right:0;
+    top:10%;
+}
+
+/*————————————————————————————————RESPONSIVE———————————————————————————————*/
+
+@media(max-width:425px){
+
+    #hero-part .content{
+        flex-direction: column-reverse;
+        height:fit-content;
+        align-items: center;
+        margin-top:0;
+    }
+
+    #hero-part .slider{
+        position:static;
+    }
+
+    #hero-part #summary{
+        bottom:var(--three-xl-size);
+        position:relative;
+        backdrop-filter: brightness(0.7) blur(5px);
+    }
+
+    #hero-part.background{
+        height:100%;
+    }
+}
+
+/*—————————————————————————————————————————————————————————————————————————*/

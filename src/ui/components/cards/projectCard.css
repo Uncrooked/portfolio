@@ -1,0 +1,56 @@
+.project-card{
+    background-color:var(--very-dark-grey-color);
+    padding:var(--s-size);
+    border-radius:var(--xl-size);
+    transition:all 0.3s;
+    max-width:min(calc(100vw - (2 * var(--two-xs-size))),350px);
+    min-width:300px;
+    width:fit-content;
+}
+
+.project-card .container-img img,.content .project-card .container-img img{
+    width:100%;
+    height:auto;
+    border-radius:var(--m-size);
+    transition:all 0.3s;
+}
+
+
+.project-card div.bottom, .card-slider .project-card div.bottom{
+    display:flex;
+    align-items: end;
+    justify-content: space-between;
+}
+
+.project-card h3{
+    max-width:200px;
+}
+
+.project-card div.bottom .tags{
+    display:flex;
+    margin-top:var(--xs-size);
+    gap:var(--three-xs-size);
+    overflow-x: scroll;
+}
+
+.project-card div.bottom .tags .tag{
+    text-wrap:nowrap;
+}
+
+
+/*———————————————————HOVER—————————————————————————*/
+
+.project-card:hover{
+    background-color:var(--dark-grey-color);
+}
+
+.project-card:hover .container-img img,.content .project-card:hover .container-img img{
+    transform:rotate(3deg);
+}
+
+/*————————————————————————l-size————————————————————————*/
+
+.project-card.l-size{
+    max-width:calc(100vw - (2 * var(--two-xs-size)));
+    width:500px;
+}

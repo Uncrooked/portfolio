@@ -1,0 +1,22 @@
+.project-part{
+    margin-block:var(--three-xl-size);
+}
+
+.project-part .top{
+    display:flex;
+    align-items: center;
+    gap:var(--s-size);
+}
+
+.project-part ul.project-cats li.project-cat-li{
+    margin-block:var(--two-xl-size);
+}
+
+/*————————————————————RESPONSIVE————————————————————————*/
+
+@media(max-width:425px){
+    .project-part .top.desktop{
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}

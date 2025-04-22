@@ -1,0 +1,8 @@
+#skills .container-skills{
+    box-sizing: content-box;
+    height:fit-content;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    padding-block:var(--xl-size);
+}

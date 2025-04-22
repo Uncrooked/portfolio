@@ -1,0 +1,35 @@
+#contact form .flex-row{
+    display:grid;
+    gap:var(--s-size);
+    grid-template-columns: 1fr 1fr;
+}
+
+#contact form{
+    display:block;
+}
+
+
+#contact form .flex-row div.row{
+    width:100%;
+    min-width: 250px;
+}
+
+#contact form button:after{
+    background-color: var(--purple-color);
+}
+
+#contact form button{
+    background-color: var(--white-color);
+}
+
+#contact form button div.content, #contact form button div.content i svg, #contact form button div.content i{
+    color:var(--purple-color) !important;
+}
+
+/*—————————————————RESPONSIVE——————————————————-*/
+
+@media(max-width:1024px){
+    #contact form .flex-row{
+        grid-template-columns: 1fr;
+    }
+}

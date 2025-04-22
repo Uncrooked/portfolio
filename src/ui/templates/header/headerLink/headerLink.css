@@ -1,0 +1,36 @@
+.header-link{
+    background-color:var(--dark-grey-color);
+    text-decoration: none;
+
+    display:flex;
+    align-items: center;
+    gap:var(--two-xs-size);
+    
+    padding:var(--xl-size) var(--l-size);
+    width:100%;
+
+    font-size:var(--h1-font-size);
+    font-weight:bold;
+
+    border-top-right-radius: var(--m-size);
+    border-bottom-right-radius: var(--m-size);
+
+    transition:all 0.2s;
+}
+
+.header-link:hover{
+    background-color:var(--grey-color);
+}
+
+/*———————————————————REPSONSIVE—————————————————--————*/
+
+@media(max-width:425px){
+    .header-link{
+        position:relative;
+        font-size:var(--h5-font-size);
+        padding:var(--s-size);
+        right:var(--two-xs-size);
+    }
+}
+
+/*——————————————————————————————————————————————--————*/

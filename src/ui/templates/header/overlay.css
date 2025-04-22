@@ -1,0 +1,74 @@
+#overlay{
+    padding-top:var(--four-xl-size);
+    width:100vw;
+    height:100vh;
+
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:var(--l-size);
+
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:9;
+
+    background:url("/img/backgrounds/background-header-overlay.svg");
+    background-repeat: no-repeat;
+    background-position: 65vw 35vh;
+    background-color:var(--black-color);
+
+    animation-name: header-overlay-anim;
+    animation-duration:0.5s;
+}
+
+
+@keyframes header-overlay-anim{
+    0%{
+        transform:translateY(100vh);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+}
+
+
+#overlay .left{
+    display:flex;
+    flex-direction: column;
+    gap:var(--m-size);
+}
+
+#overlay .right{
+    display:flex;
+    flex-direction: column;
+    gap:var(--s-size);
+    max-width:550px;
+}
+
+#overlay .right .social-medias{
+    display:flex;
+    gap:var(--xs-size);
+}
+
+/*———————————————RESPONSIVE—————————————————*/
+
+@media(max-width:425px){
+    #overlay{
+        grid-template-columns: 1fr;
+        padding-inline:10px;
+        gap:0;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    #overlay .left{
+        gap:var(--xs-size);
+        height: fit-content;
+    }
+
+    #overlay .right{
+        gap:var(--two-xs-size);
+    }
+}
+
+/*—————————————————————————————————————————-*/

@@ -1,0 +1,7 @@
+#brand-history{
+    padding-block:var(--three-xl-size);
+}
+
+#brand-history h2{
+    margin-bottom:var(--l-size);
+}

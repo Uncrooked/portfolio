@@ -1,0 +1,42 @@
+#last-project-part{
+    display:flex;
+    gap:var(--l-size);
+    align-items: center;
+}
+
+#last-project-part .left{
+    max-width:100%;
+}
+
+#last-project-part .left h2, #last-project-part .right h3{
+    margin-bottom:var(--s-size);
+}
+
+#last-project-part .right{
+    width:100%;
+}
+
+#last-project-part .right .categories{
+    display:flex;
+    flex-direction: column;
+}
+
+#last-project-part .right .categories .btn{
+    margin-bottom:var(--two-xs-size);
+    width:100%;
+}
+
+/*————————————————RESPONSIVE—————————————————*/
+
+@media(max-width:425px){
+    #last-project-part{
+        flex-direction: column;
+    }
+
+    #last-project-part .left{
+        display: grid;
+        align-items: center;
+    }
+}
+
+/*———————————————————————————————————————————*/

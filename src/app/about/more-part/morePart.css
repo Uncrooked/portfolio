@@ -1,0 +1,10 @@
+#more-part{
+    display:grid;
+    gap:var(--m-size);
+    padding:var(--three-xl-size) var(--s-size);
+}
+
+#more-part h3{
+    font-size:var(--h5-font-size);
+    margin-bottom:var(--two-xs-size);
+}

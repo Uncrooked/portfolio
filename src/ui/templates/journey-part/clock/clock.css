@@ -1,0 +1,35 @@
+.clock img{
+    display:block;
+    margin: auto;
+}
+
+.clock .clock-body{
+    animation-name:clock-body-anim;
+    animation-duration:3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes clock-body-anim {
+    0%{transform:rotate(0)}
+    0%{transform:rotate(-360deg)}
+}
+
+/*—————————————————————REPONSIVE———————————————————————————*/
+
+@media (max-width:425px) {
+
+    .clock{
+        position:relative;
+        top:100px;
+        z-index:-1;
+    }
+    .clock .clock-head{
+        width:50px;
+        position:relative;
+        top:20px;
+    }
+    .clock .clock-body{
+        width:50px;
+    }
+}

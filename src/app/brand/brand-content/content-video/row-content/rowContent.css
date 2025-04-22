@@ -1,0 +1,20 @@
+.row-content{
+    display:flex;
+    flex-wrap:wrap;
+    align-items: center;
+    justify-content: center;
+    gap:var(--xl-size);
+}
+
+.row-content.reverse{
+    flex-direction: row-reverse;
+}
+
+.row-content iframe{
+    border-radius:var(--s-size);
+}
+
+.row-content img{
+    max-width: 100%;
+    height:auto;
+}

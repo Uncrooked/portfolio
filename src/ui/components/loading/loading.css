@@ -1,0 +1,15 @@
+.loading{
+    width:20px;
+    height:20px;
+    display:flex;
+    gap:var(--three-xs-size);
+    align-items: center;
+    justify-content: center;
+}
+
+.loading .bar{
+    width:3px;
+    height:3px;
+    border-radius:var(--s-size);
+    background-color: var(--white-color);
+}

@@ -1,0 +1,20 @@
+#last-cta{
+    padding-block:var(--four-xl-size);
+    background:url("/img/pages/brand/background-last-cta-cliver-brand.webp");
+    background-size:cover;
+    background-position: center;
+}
+
+#last-cta .content.desktop{
+    display:flex;
+    flex-direction: column;
+    gap:var(--s-size);
+}
+
+/*————————————————RESPONSIVE———————————————————*/
+
+@media(max-width:425px){
+    #last-cta div.content.desktop{
+        align-items: center;
+    }
+}
