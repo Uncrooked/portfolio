@@ -1,10 +1,11 @@
 
 //npm
 import { useFrame } from "@react-three/fiber";
-import { useRef } from "react";
+import { useRef, Suspense } from "react";
 
 //components
 import Model from "@/ui/components/3D/model/model";
+import LoaderThree from "@/ui/components/3D/loader/loaderThree";
 
 //type
 import type { Group } from "three";
@@ -17,6 +18,8 @@ export default function Logo3d(){
         })
 
     return(
-        <Model path="https://leomurail.digital/assets/models/portfolio/logo.glb" ref={ref}/>
+        <Suspense fallback={<LoaderThree/>}>
+            <Model path="https://leomurail.digital/assets/models/portfolio/logo.glb" ref={ref}/>
+        </Suspense>
     )
 }

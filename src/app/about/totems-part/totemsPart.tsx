@@ -4,11 +4,12 @@
 import { Canvas } from '@react-three/fiber';
 import { OrthographicCamera } from '@react-three/drei';
 import { EffectComposer, Bloom, ToneMapping } from '@react-three/postprocessing';
-import { useState, useRef } from 'react';
+import { useState, useRef, Suspense } from 'react';
 
 // components
 import Totem from '@/ui/components/3D/totem/totem';
 import TotemsOverlay from './totems-overlay/totemsOverlay';
+import LoaderThree from '@/ui/components/3D/loader/loaderThree';
 
 //const
 import { models, statesArray } from './constants';
@@ -32,7 +33,9 @@ export default function TotemsPart() {
         <section id="totems-part" className="no-max-width">
 
             <Canvas style={{ width: '100%', height: '100vh' }} className="canvas">
+                <Suspense fallback={<LoaderThree/>}>
                 {modelsEl}
+                </Suspense>
                 <ambientLight intensity={1} />
                 <directionalLight position={[5, 5, 50]} color="white" intensity={1} />
                 <OrthographicCamera makeDefault position={[0, 0, 20]} zoom={30} near={0.1} far={500}/>
