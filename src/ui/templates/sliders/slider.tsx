@@ -53,7 +53,7 @@ export default function Slider<T>({children,className,panStart,panEnd,range,ref,
         if(gap){
             setX(window.innerWidth <= 430 ? gap : 0);
         }
-    },[])
+    },[gap])
 
     //handles
     const handlePanStart = (event:PointerEvent,info:PanInfo) => {

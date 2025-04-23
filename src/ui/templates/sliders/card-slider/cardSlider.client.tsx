@@ -61,7 +61,7 @@ export default function CardSliderContent({content}:props){
             length:stepLength,
             max:Math.floor(width / stepLength)
         });
-    },[])
+    },[content.length])
 
     return(
         <Slider ref={target} step={step.length} range={{start:0,end:step.max}} className={`card-slider ${content.length > 0 ? "" : "nothing"}`} panStart={() => {setIsClickable(false)}} panEnd={() => {setIsClickable(true)}} >

@@ -16,12 +16,15 @@ import "./singlePost.css";
 export default async function Page({
     params,
 }: {
-    params: { slug: string }
+    params: Promise<{ slug: string }>
 }) {
+
+    const { slug } = await params;
+
     // Fetch data from Prisma
     const data = await prisma.projects.findFirst({
         where: {
-            slug: params.slug
+            slug: slug
         },
         select:{
             name:true,
