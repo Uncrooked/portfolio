@@ -45,6 +45,7 @@ model Projects {
   thumbnail       Thumbnails  @relation(fields: [thumbnail_id], references: [id])
   category        Categories  @relation(fields: [category_id], references: [id])
   tags_join       TagsJoin[]
+  desc            String?     @db.Text
 }
 
 model Thumbnails {

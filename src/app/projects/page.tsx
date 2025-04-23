@@ -14,19 +14,28 @@ import { Project, Category } from "./type";
 export default async function Page(){
 
     const projectsData = await prisma.projects.findMany({
-        include:{
+        select:{
+            name:true,
+            url:true,
+            slug:true,
             tags_join:{
-                include:{
+                select:{
                     tags:true
                 }
             },
             thumbnail:true,
-            category:true
+            category:{
+                select:{
+                    name:true,
+                    color:true,
+                    slug:true
+                }
+            }
         }
     })
 
     const formattedProjectsData: Project[] = projectsData.map((param) => ({
-        url: param.url,
+        url: "/projects/" + param.slug,
         category:param.category.slug,
         color: param.category.color,
         title: param.name,

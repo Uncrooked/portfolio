@@ -15,11 +15,18 @@ export default async function CardSlider({category_id}:props){
         where:{
             category_id:category_id
         },
-        include:{
-            category:true,
+        select:{
+            name:true,
+            url:true,
+            slug:true,
+            category:{
+                select:{
+                    color:true
+                }
+            },
             thumbnail:true,
             tags_join:{
-                include:{
+                select:{
                     tags:true
                 }
             }
@@ -31,7 +38,7 @@ export default async function CardSlider({category_id}:props){
         title:param.name,
         thumbnail:param.thumbnail,
         tags:param.tags_join.map(param => param.tags),
-        href:param.url
+        href: "/projects/" + param.slug
     }))
 
     return(

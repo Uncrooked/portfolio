@@ -18,10 +18,17 @@ export default async function LastProjectPart(){
         orderBy: {
             id: 'desc',
         },
-        include:{
-            category:true,
+        select:{
+            url:true,
+            name:true,
+            slug:true,
+            category:{
+                select:{
+                    color:true
+                }
+            },
             tags_join:{
-                include:{
+                select:{
                     tags:true
                 }
             },
@@ -30,7 +37,7 @@ export default async function LastProjectPart(){
     });
     
     const filteredData = {
-        href:data?.url,
+        href: "/projects/" + data?.slug,
         thumbnail:data?.thumbnail,
         title:data?.name,
         tags:data?.tags_join.map(param => param.tags),
