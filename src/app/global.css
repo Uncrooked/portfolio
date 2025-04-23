@@ -136,8 +136,8 @@ li{
     list-style: none;
 }
 
-body.display-overlay::-webkit-scrollbar{
-    display:none !important;
+body.display-overlay{
+    overflow: hidden;
 }
 
 iframe{

@@ -21,7 +21,8 @@ export default async function CardSlider({category_id}:props){
             slug:true,
             category:{
                 select:{
-                    color:true
+                    color:true,
+                    slug:true
                 }
             },
             thumbnail:true,
@@ -33,13 +34,13 @@ export default async function CardSlider({category_id}:props){
         }
     })
 
-    const filteredData = data.map(param => ({
+    const filteredData = data.length ? data.map(param => ({
         color:param.category.color,
         title:param.name,
         thumbnail:param.thumbnail,
         tags:param.tags_join.map(param => param.tags),
         href: "/projects/" + param.slug
-    }))
+    })) : [];
 
     return(
         <CardSliderContent content={filteredData} />

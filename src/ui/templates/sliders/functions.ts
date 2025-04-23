@@ -42,7 +42,7 @@ export function slide({pos,range,index,setPos,container,step,gap}:baseProps){
     container && currentDot(container,index.current);
     const currentGap = gap ? gap : 0;
     if(step){
-        setPos(window.innerWidth <= 430 ? (-(step - 5) * index.current) + currentGap : (-step * index.current)); // Update the X state (-5 for the margin-inline space)
+        setPos(window.innerWidth <= 430 ? (-step * index.current) + currentGap : (-step * index.current)); // Update the X state (-5 for the margin-inline space)
     }
 
     return true;
@@ -61,8 +61,8 @@ export const onPanEnd = () => {
     return false; // Reset after sliding ends
 }
 
-export const onClick = ({pos = false,range,index,setPos,container,step}:baseProps) => {
-    slide({pos,range,index,setPos,container,step});
+export const onClick = ({pos = false,range,index,setPos,container,step,gap}:baseProps) => {
+    slide({pos,range,index,setPos,container,step,gap});
 }
 
 export function setDots(number:number): string[]{

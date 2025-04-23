@@ -1,38 +1,30 @@
+.select-input{
+    position: relative;
+}
+
 .select-input label{
     display:none;
 }
 
-.select-input{
-    font-weight:600;
-    font-size:var(--l-font-size);
-}
-
 .select-input select{
-    font-weight:600;
-    font-size:var(--l-font-size);
-}
-
-.select-input select::picker(select){
-    font-size:var(--m-font-size);
-}
-
-.select-input select,
-.select-input select::picker(select){
-    appearance: base-select;
+    border:none;
+    -moz-appearance: none; 
+    -webkit-appearance: none; 
+    appearance: none;
+    border-bottom:solid 1px var(--white-color);
     border-radius:0;
     padding-left:0;
+    font-weight:600;
+    font-size:var(--l-font-size);
 }
 
-.select-input select option{
-    padding:var(--xs-size);
-}
-
-.select-input select::picker(select){
+.select-input .icon{
     position:absolute;
-    border:none;
-    padding:var(--two-xs-size);
-    backdrop-filter: blur(50px);
-    background-color:rgba(0,0,0,0.5);
-    margin-top:var(--s-size);
-    top:anchor(bottom);
+    right:0;
+    top:calc(50% - 10px);
+    transform:rotate(90deg);
+}
+
+.select-input .icon .loading{
+    transform:rotate(-90deg);
 }

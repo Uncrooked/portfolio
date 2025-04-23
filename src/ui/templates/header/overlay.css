@@ -1,7 +1,8 @@
 #overlay{
     padding-top:var(--four-xl-size);
     width:100vw;
-    height:100vh;
+    height:100%;
+    z-index:100;
 
     display:grid;
     grid-template-columns: 1fr 1fr;
@@ -55,10 +56,11 @@
 
 @media(max-width:425px){
     #overlay{
-        grid-template-columns: 1fr;
+        padding-top:var(--three-xl-size);
         padding-inline:10px;
-        gap:0;
-        grid-template-rows: 1fr 1fr;
+        flex-direction: column;
+        display:flex;
+        gap:var(--s-size);
     }
 
     #overlay .left{
@@ -68,6 +70,14 @@
 
     #overlay .right{
         gap:var(--two-xs-size);
+    }
+
+    #overlay .right h2{
+        font-size:var(--h4-font-size);
+    }
+
+    #overlay .right ul.social-medias{
+        margin-top:var(--xs-size);
     }
 }
 

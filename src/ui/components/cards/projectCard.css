@@ -54,3 +54,12 @@
     max-width:calc(100vw - (2 * var(--two-xs-size)));
     width:500px;
 }
+
+/*———————————————————RESPONSIVE————————————————————-*/
+
+@media(max-width:425px){
+    .project-card{
+        width:calc(100vw - 20px);
+        max-width:none;
+    }
+}

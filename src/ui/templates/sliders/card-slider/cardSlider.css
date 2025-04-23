@@ -10,9 +10,9 @@
 }
 
 .card-slider .content .container{
+    min-height:100px;
     gap:var(--s-size);
 }
-
 
 .card-slider div.bottom{
     justify-content: start;
@@ -32,6 +32,30 @@
 
 .card-slider .arrow.right{
     right:var(--two-xs-size);
+}
+
+/*———————————————————————NO PROJECTS———————————————————————————*/
+
+.card-slider.nothing .content .container{
+    width:100%;
+    background-color:var(--dark-grey-color);
+    border-radius:var(--xs-size);
+}
+
+.card-slider.nothing .content .container::before{
+    content:"no projects";
+    background-color:var(--white-color);
+    height:fit-content;
+    margin:var(--xs-size);
+    padding:var(--three-xs-size);
+    border-radius:var(--three-xs-size);
+    color:var(--black-color);
+    font-weight:600;
+    font-size:var(--s-font-size);
+}
+
+.card-slider.nothing .arrow, .card-slider.nothing .dot{
+    display:none;
 }
 
 /*———————————————————————RESPONSIVE———————————————————————————*/

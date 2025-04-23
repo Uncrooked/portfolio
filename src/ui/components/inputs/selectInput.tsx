@@ -1,3 +1,6 @@
+//components
+import Icon from "../illu/icon";
+
 //styles
 import "./selectInput.css";
 
@@ -20,6 +23,7 @@ export default function SelectInput({name,label,options}:props){
             <select name={name} id={name}>
                 {optionsEl}
             </select>
+            <Icon picked="arrow" size={20}/>
         </div>
     )
 }

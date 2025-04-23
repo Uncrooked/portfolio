@@ -9,7 +9,7 @@ function setBurger(){
     }
 }
 
-function changeOverlay(toggle = true,overlayEl:HTMLElement,body:HTMLElement){
+function changeOverlay(overlayEl:HTMLElement,body:HTMLElement,toggle = true, displayOverlay: "add" | "remove" = "add"){
     overlayEl?.animate([
         {transform:"translateY(0)"},
         {transform:"translateY(100vh)"}
@@ -21,8 +21,8 @@ function changeOverlay(toggle = true,overlayEl:HTMLElement,body:HTMLElement){
     setTimeout(() => {
         const overlayEl = document.getElementById("overlay");
         const currentAction = toggle ? "toggle" : "add";
-        overlayEl?.classList[currentAction]("display-none");
-        body?.classList[currentAction]("display-overlay");
+        overlayEl?.classList[toggle ? "toggle" : "add"]("display-none");
+        body?.classList[toggle ? "toggle" : displayOverlay]("display-overlay");
     },450);
 }
 
@@ -31,7 +31,7 @@ export function setOverlay(){
     const overlayEl = document.getElementById("overlay");
     if(overlayEl){
         if(!Array.from(overlayEl.classList).includes("display-none")){
-            changeOverlay(true,overlayEl,body);
+            changeOverlay(overlayEl,body,true);
         }else{
             overlayEl?.classList.toggle("display-none");
             body?.classList.toggle("display-overlay");
@@ -45,6 +45,6 @@ export function removeHeader(){
     const body = document.getElementsByTagName("body")[0];
     if(overlayEl && !overlayEl.classList[1]){
         setBurger();
-        changeOverlay(false,overlayEl,body);
+        changeOverlay(overlayEl,body,false,"remove");
     }
 }

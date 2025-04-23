@@ -27,7 +27,7 @@ interface props{
             slug: string;
         }[];
         href: string;
-    }[];
+    }[] | [];
 }
 
 export default function CardSliderContent({content}:props){
@@ -53,18 +53,18 @@ export default function CardSliderContent({content}:props){
     ))
 
     useEffect(() => {
-        const projectCount = content.length;
+        const projectCount = content?.length;
         const step = content.length > 0 ? content.length - 1 : 0;
         const width = (projectCount * 400) + (step * 20);
         const stepLength = window.innerWidth;
         setStep({
             length:stepLength,
-            max:Math.floor(width / stepLength) - 1
+            max:Math.floor(width / stepLength)
         });
     },[])
 
     return(
-        <Slider ref={target} step={step.length} range={{start:0,end:step.max}} className="card-slider" panStart={() => {setIsClickable(false)}} panEnd={() => {setIsClickable(true)}} >
+        <Slider ref={target} step={step.length} range={{start:0,end:step.max}} className={`card-slider ${content.length > 0 ? "" : "nothing"}`} panStart={() => {setIsClickable(false)}} panEnd={() => {setIsClickable(true)}} >
             {projectCardsEl}
         </Slider>
     )

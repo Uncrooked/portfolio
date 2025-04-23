@@ -28,7 +28,7 @@
     .header-link{
         position:relative;
         font-size:var(--h5-font-size);
-        padding:var(--s-size);
+        padding:var(--xs-size);
         right:var(--two-xs-size);
     }
 }
