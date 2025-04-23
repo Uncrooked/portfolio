@@ -6,6 +6,7 @@ import JourneyPart from "../ui/templates/journey-part/journeyPart";
 import BrandPart from "@/ui/templates/brand-part/brandPart";
 
 export default function Page(){
+  console.log("render");
   return(
     <section id="home" className="no-max-width">
       <HeroPart/>

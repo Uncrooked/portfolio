@@ -9,6 +9,7 @@ import { fonts } from "@/lib/fonts";
 import "./contact.css";
 
 export default function Page(){
+    console.log("render");
     return(
         <section id="contact" className="no-max-width">
             <div className="desktop main">
