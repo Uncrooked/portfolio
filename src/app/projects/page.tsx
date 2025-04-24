@@ -1,5 +1,5 @@
 //npm
-import { useState } from "react";
+import { Suspense } from "react";
 
 //db
 import prisma from "@/lib/prisma";
@@ -7,6 +7,7 @@ import prisma from "@/lib/prisma";
 //components
 import Banner from "@/ui/components/banner/banner";
 import Main from "./main/main";
+import Loading from "./loading";
 
 //types
 import { Project, Category } from "./type";
@@ -58,11 +59,13 @@ export default async function Page(){
     })
 
     return(
-        <section id="projects" className="no-max-width">
-            <Banner title="MES PROJETS" subTitle="Scolaires et personnels" bgColor="yellow" />
-            <section className="projects-part">
-                <Main projectsData={formattedProjectsData} categories={categories} />
+        <Suspense fallback={<Loading/>}>
+            <section id="projects" className="no-max-width">
+                <Banner title="MES PROJETS" subTitle="Scolaires et personnels" bgColor="yellow" />
+                <section className="projects-part">
+                    <Main projectsData={formattedProjectsData} categories={categories} />
+                </section>
             </section>
-        </section>
+        </Suspense>
     )
 }

@@ -6,7 +6,7 @@ import React, { Suspense } from "react";
 
 //components
 import Icon from "../illu/icon";
-import Loading from "../loading/loading";
+import AssetLoading from "../loading/asset-loading/assetLoading";
 
 //styles
 import "./roundBtn.css";
@@ -25,13 +25,13 @@ export default function RoundBtn({ path, icon, size, display = true, onClick = (
   return (
     path ?
     <Link className={`round-btn ${size} ${display ? "" : "display-none"} ${className}`} href={path} onClick={onClick}>
-      <Suspense fallback={<Loading/>}>
+      <Suspense fallback={<AssetLoading/>}>
         <Icon picked={icon} size={25} color="var(--white-color)" />
       </Suspense>
     </Link>
     :
     <div className={`round-btn ${size} ${display ? "" : "display-none"} ${className}`} onClick={onClick}>
-      <Suspense fallback={<Loading/>}>  
+      <Suspense fallback={<AssetLoading/>}>  
         <Icon picked={icon} size={25} color="var(--white-color)" />
       </Suspense>  
     </div>

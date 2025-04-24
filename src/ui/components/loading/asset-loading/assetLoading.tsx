@@ -4,9 +4,9 @@
 import { motion } from "motion/react"
 
 //styles
-import "./loading.css";
+import "./assetLoading.css";
 
-export default function Loading(){
+export default function AssetLoading(){
     return(
         <motion.div className="loading">
             <motion.div animate={{scaleY:[1,4,1]}} transition={{duration:2,repeat:Infinity}} className="bar"></motion.div>

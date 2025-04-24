@@ -5,7 +5,7 @@ import { useEffect, useState, Suspense } from "react";
 import dynamic from "next/dynamic";
 
 //components
-import Loading from "../loading/loading";
+import AssetLoading from "../loading/asset-loading/assetLoading";
 
 //styles
 import "./icon.css";
@@ -21,7 +21,7 @@ export default function Icon({picked,color = "white" ,size = 20, onClick}:props)
     const [SvgIcon,setSvgIcon] = useState<React.ElementType<{width?:number,fill?:string}> | null>(null);
     
     useEffect(() => {
-       const Icon = dynamic(() => import(`/public/img/icons/dynamics/${picked}.svg`), { ssr: false , loading: () => <Loading />,});
+       const Icon = dynamic(() => import(`/public/img/icons/dynamics/${picked}.svg`), { ssr: false , loading: () => <AssetLoading />,});
        setSvgIcon(() => Icon);
     },[picked]); 
 
@@ -33,11 +33,11 @@ export default function Icon({picked,color = "white" ,size = 20, onClick}:props)
     return (
         <i className="icon" onClick={onClick}>
             {SvgIcon ? (
-                <Suspense fallback={<Loading />}>
+                <Suspense fallback={<AssetLoading />}>
                     <SvgIcon {...iconProps} />
                 </Suspense>
             ) : (
-                <Loading />
+                <AssetLoading />
             )}
         </i>
     );
