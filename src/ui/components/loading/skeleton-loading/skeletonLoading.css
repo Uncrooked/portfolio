@@ -1,0 +1,27 @@
+.skeleton-loading{
+    width:var(--skeleton-width);
+    height:var(--skeleton-height);
+    border-radius:var(--skeleton-border-radius);
+    background-color:var(--very-dark-grey-color);
+    animation-name:skeleton-anim;
+    animation-duration:2s;
+    animation-iteration-count: infinite;
+}
+
+.skeleton-loading.center{
+    margin:auto;
+}
+
+@keyframes skeleton-anim {
+    0%{
+        background-color: var(--very-dark-grey-color);
+    }
+
+    50%{
+        background-color: var(--dark-grey-color);
+    }
+
+    100%{
+        background-color: var(--very-dark-grey-color);
+    }
+}

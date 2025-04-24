@@ -1,6 +1,7 @@
 //components
 import Btn from "@/ui/components/btns/btn";
 import Icon from "@/ui/components/illu/icon";
+import Iframe from "@/ui/components/iframe/iframe";
 
 //styles
 import "./partnerVideo.css";
@@ -13,7 +14,7 @@ export default function PartnerVideo(){
                 <p className="sub-title">©made by @etienne.mck</p>
                 <Btn path="https://instagram.com/cliverproject">Voir le compte<Icon picked="instagram"/></Btn>
             </div>
-                <iframe src="https://www.instagram.com/reel/C79e3oXM0--/embed" height={600}></iframe>
+                <Iframe src="https://www.instagram.com/reel/C79e3oXM0--/embed" height={600} />
         </div>
     )
 }

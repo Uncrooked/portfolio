@@ -13,7 +13,6 @@ import { fonts } from "@/lib/fonts";
 import "./lastProjectPart.css";
 
 export default async function LastProjectPart(){
-
     const data = await prisma.projects.findFirst({
         orderBy: {
             id: 'desc',

@@ -53,9 +53,7 @@ export default function CardContent({
     return(
         <article className={`project-card ${size}-size`}>
             <div className="container-img top">
-            <Suspense fallback={<span>Loading...</span>}>
                 <Image draggable="false" src={thumbnail.path} alt={thumbnail.alt} width={thumbnail.width} height={thumbnail.height} />
-            </Suspense>
             </div>
             <div className="bottom">
                 <div className="left">

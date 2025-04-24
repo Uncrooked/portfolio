@@ -1,0 +1,12 @@
+.iframe-container{
+    position:relative;
+}
+
+.iframe-container .skeleton-loading{
+    position:absolute;
+}
+
+.iframe-container iframe{
+    position: relative;
+    z-index:2;
+}
