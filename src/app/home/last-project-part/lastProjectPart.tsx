@@ -52,9 +52,9 @@ export default async function LastProjectPart(){
             <div className="right">
                 <h3>Parcourir</h3>
                 <div className="categories">
-                    <Btn color="purple" path="/about" >Développement web <Icon picked="eye" size={20} /></Btn>
-                    <Btn color="light-purple" path="/about" >Design web <Icon picked="eye" size={20} /></Btn>
-                    <Btn color="red" path="/about" >Design print <Icon picked="eye" size={20} /></Btn>
+                    <Btn color="purple" path="/projects" >Développement web <Icon picked="eye" size={20} /></Btn>
+                    <Btn color="light-purple" path="/projects" >Design web <Icon picked="eye" size={20} /></Btn>
+                    <Btn color="red" path="/projects" >Design print <Icon picked="eye" size={20} /></Btn>
                 </div>
             </div>
         </section>

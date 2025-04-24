@@ -29,7 +29,7 @@ export default function ProjectCat({cat}:props){
                 <CardSlider category_id={current.category_id}/>
             </Suspense>
             <section className="min-width">
-                <Btn color={current.color} >Voir plus</Btn>
+                <Btn path="/projects" color={current.color} >Voir plus</Btn>
             </section>
         </div>
     )

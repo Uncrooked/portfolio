@@ -24,7 +24,7 @@ export default function ProjectPart(){
         <section className="project-part no-max-width">
             <div className="top desktop">
                 <h2 className={fonts.orbitron.className} >Mes projets</h2>
-                <Btn color="yellow">Tous les projets <Icon picked="eye" size={20}/></Btn>
+                <Btn path="/projects" color="yellow">Tous les projets <Icon picked="eye" size={20}/></Btn>
             </div>
             <ul className="project-cats">
                 {projectCats}
