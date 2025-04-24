@@ -8,7 +8,7 @@ import ProjectPart from "./home/project-part/projectPart";
 import SentencePart from "./home/sentence-part/sentencePart";
 import JourneyPart from "../ui/templates/journey-part/journeyPart";
 import BrandPart from "@/ui/templates/brand-part/brandPart";
-import Loading from "@/ui/components/loading/page-loading/pageLoading";
+import Loading from "./loading";
 
 export default function Page(){
 
