@@ -2,12 +2,10 @@
 import prisma from "@/lib/prisma";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { Suspense } from "react";
 
 //components
 import Tag from "@/ui/components/tags/tag";
 import Btn from "@/ui/components/btns/btn";
-import Loading from "./loading";
 
 //fonts
 import { fonts } from "@/lib/fonts";
@@ -60,31 +58,27 @@ export default async function Page({
     if(!data) notFound();
 
     return (
-        <Suspense fallback={<Loading/>}>
-            <section id="single-post">
-                <div className="left">
-                    <h1 className={fonts.orbitron.className}>{data.name}</h1>
-                    <div className="tags">
-                        {
-                            data.tags_join.map((param,index) => 
-                                <Tag key={index}>{param.tags.name}</Tag>
-                            )
-                        }
-                    </div>
-
-                    <div className="desc">
-                        {data.desc?.split("\n\n").map((param,index) => <p key={index}>{param}</p>)}
-                    </div>
-
-                    <Btn path={data.url} >Voir le projet</Btn>
+        <section id="single-post">
+            <div className="left">
+                <h1 className={fonts.orbitron.className}>{data.name}</h1>
+                <div className="tags">
+                    {
+                        data.tags_join.map((param,index) => 
+                            <Tag key={index}>{param.tags.name}</Tag>
+                        )
+                    }
                 </div>
-                <Image 
-                    width={data.thumbnail.width} 
-                    height={data.thumbnail.height} 
-                    alt={data.thumbnail.alt}
-                    src={data.thumbnail.path} 
-                />
-            </section>
-        </Suspense>
+                <div className="desc">
+                    {data.desc?.split("\n\n").map((param,index) => <p key={index}>{param}</p>)}
+                </div>
+                <Btn path={data.url} >Voir le projet</Btn>
+            </div>
+            <Image 
+                width={data.thumbnail.width} 
+                height={data.thumbnail.height} 
+                alt={data.thumbnail.alt}
+                src={data.thumbnail.path} 
+            />
+        </section>
     );
 }
