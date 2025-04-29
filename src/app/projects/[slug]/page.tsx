@@ -29,6 +29,7 @@ export default async function Page({
         select:{
             name:true,
             url:true,
+            other_url:true,
             desc:true,
             thumbnail: {
                 select: {
@@ -57,6 +58,11 @@ export default async function Page({
 
     if(!data) notFound();
 
+    const otherUrls = data.other_url as {
+        label:string;
+        url:string;
+    }[];
+
     return (
         <section id="single-post">
             <div className="left">
@@ -71,7 +77,14 @@ export default async function Page({
                 <div className="desc">
                     {data.desc?.split("\r\n\r\n").map((param,index) => <p key={index}>{param}</p>)}
                 </div>
-                <Btn path={data.url} >Voir le projet</Btn>
+                <div className="container-btns">
+                    <Btn path={data.url} >Voir le projet</Btn>
+                    {
+                        otherUrls && otherUrls.map((param,index) => 
+                            <Btn key={index} path={param.url} color="light-blue">{param.label}</Btn>
+                        )
+                    }
+                </div>
             </div>
             <Image 
                 width={data.thumbnail.width} 
