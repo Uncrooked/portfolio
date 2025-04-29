@@ -22,7 +22,7 @@
     justify-content: space-between;
 }
 
-.project-card h3{
+.project-card .left{
     max-width:200px;
 }
 
@@ -31,6 +31,11 @@
     margin-top:var(--xs-size);
     gap:var(--three-xs-size);
     overflow-x: scroll;
+    max-width:100%;
+}
+
+.project-card div.bottom .tags::-webkit-scrollbar{
+    display:none;
 }
 
 .project-card div.bottom .tags .tag{
