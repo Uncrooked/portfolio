@@ -1,6 +1,5 @@
 .btn{
-    display:grid;
-    place-items: center;
+    display:inline-block;
     width:fit-content;
     border:none;
     padding:var(--s-size);

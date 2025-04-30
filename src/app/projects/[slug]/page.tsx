@@ -69,7 +69,7 @@ export default async function Page({
                     }
                 </div>
                 <div className="desc">
-                    {data.desc?.split("\r\n\r\n").map((param,index) => <p key={index}>{param}</p>)}
+                    {data.desc?.split("\n\n").map((param,index) => <p key={index}>{param}</p>)}
                 </div>
                 <Btn path={data.url} >Voir le projet</Btn>
             </div>
