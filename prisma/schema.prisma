@@ -42,7 +42,6 @@ model Projects {
   name            String      @db.VarChar(64)
   slug            String      @db.VarChar(64)
   url             String      @db.VarChar(128)
-  other_url       Json?
   thumbnail       Thumbnails  @relation(fields: [thumbnail_id], references: [id])
   category        Categories  @relation(fields: [category_id], references: [id])
   tags_join       TagsJoin[]

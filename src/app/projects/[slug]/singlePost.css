@@ -29,11 +29,6 @@
     font-size:var(--m-font-size);
 }
 
-#single-post .left .container-btns{
-    display:flex;
-    gap:var(--two-xs-size);
-}
-
 #single-post img{
     border-radius:var(--m-size);
 }
