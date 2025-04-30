@@ -1,5 +1,6 @@
 .tag{
     display:inline-block;
+    height:fit-content;
     background-color: var(--dark-grey-color);
     padding:var(--three-xs-size);
     border-radius:var(--three-xs-size);
