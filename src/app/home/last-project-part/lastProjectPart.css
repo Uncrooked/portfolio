@@ -2,6 +2,7 @@
     display:flex;
     gap:var(--l-size);
     align-items: center;
+    flex-wrap: wrap;
 }
 
 #last-project-part .left{
@@ -13,7 +14,7 @@
 }
 
 #last-project-part .right{
-    width:100%;
+    width:48%;
 }
 
 #last-project-part .right .categories{
@@ -27,6 +28,12 @@
 }
 
 /*————————————————RESPONSIVE—————————————————*/
+
+@media(max-width:768px){
+    #last-project-part .right{
+        width:100%
+    }
+}
 
 @media(max-width:425px){
     #last-project-part{

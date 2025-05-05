@@ -9,12 +9,16 @@
     overflow: visible !important;
 }
 
-.card-slider .content .container{
+.card-slider .content ul.container{
     min-height:100px;
     gap:var(--s-size);
 }
 
-.card-slider div.bottom{
+.card-slider .content ul.container li .project-card-parent, .card-slider .content ul.container li .project-card{
+    height:100%;
+}
+
+.card-slider ul.bottom{
     justify-content: start;
     max-width:var(--desktop-max-width);
     margin:auto;

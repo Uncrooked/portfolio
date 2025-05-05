@@ -55,9 +55,3 @@
         order:1;
     }
 }
-
-@media(max-width:425px){
-    #single-post h1{
-        font-size:var(--h3-font-size);
-    }
-}

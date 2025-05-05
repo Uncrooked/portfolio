@@ -38,11 +38,9 @@ export default function CardSliderContent({content}:props){
         length:0
     });
 
-    const [isClickable,setIsClickable] = useState(true);
     const projectCardsEl = content.map((param,index) => (
         <li key={index}>
-            <ProjectCard 
-                isClickable={isClickable} 
+            <ProjectCard
                 color={param.color} 
                 title={param.title}
                 thumbnail={param.thumbnail}
@@ -54,7 +52,7 @@ export default function CardSliderContent({content}:props){
 
     useEffect(() => {
         const projectCount = content?.length;
-        const step = content.length > 0 ? content.length - 1 : 0;
+        const step = content.length;
         const width = (projectCount * 400) + (step * 20);
         const stepLength = window.innerWidth;
         setStep({
@@ -64,7 +62,7 @@ export default function CardSliderContent({content}:props){
     },[content.length])
 
     return(
-        <Slider ref={target} step={step.length} range={{start:0,end:step.max}} className={`card-slider ${content.length > 0 ? "" : "nothing"}`} panStart={() => {setIsClickable(false)}} panEnd={() => {setIsClickable(true)}} >
+        <Slider step={step.length} max={step.max} className={`card-slider ${content.length > 0 ? "" : "nothing"}`} >
             {projectCardsEl}
         </Slider>
     )

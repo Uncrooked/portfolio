@@ -11,10 +11,11 @@
 .project-card .container-img img,.content .project-card .container-img img{
     width:100%;
     height:auto;
-    border-radius:var(--m-size);
+    object-fit: cover;
+    aspect-ratio: 800/600;
+    border-radius:var(--s-size);
     transition:all 0.3s;
 }
-
 
 .project-card div.bottom, .card-slider .project-card div.bottom{
     display:flex;

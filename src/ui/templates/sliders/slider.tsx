@@ -1,72 +1,85 @@
 "use client"
 
 // npm
-import Image from "next/image";
-import { useRef, useState, useEffect } from "react";
+import { useMotionValue, useAnimate } from "framer-motion";
+import React, { useRef, useEffect } from "react";
 import { motion, PanInfo } from "framer-motion";
 
 // components
 import RoundBtn from "../../components/btns/roundBtn";
 
-//functions
-import { onPanStart, onPanEnd, onClick, setDots } from "./functions";
-
 // styles
 import "./slider.css";
+
+//utils
+import { countToArray } from "./utils";
 
 interface props<T>{
     children:React.ReactNode;
     className?:string;
-    panStart?:() => T;
-    panEnd?:() => T;
-    range:{
-        start:number;
-        end:number;
-    };
-    ref?:React.Ref<HTMLDivElement> | undefined;
-    step?:number;
+    step:number;
     gap?:number;
+    max:number;
 }
 
-export default function Slider<T>({children,className,panStart,panEnd,range,ref,step,gap}:props<T>) {
+export default function Slider<T>({children,className,step,gap,max}:props<T>) {
 
-    //react var
-    const [x, setX] = useState(0);
-    let index = useRef(0);
-    const container = useRef<HTMLDivElement>(null);
-
-    const dots = setDots(range.end + 1).map((param,index) => <span key={index} className={param}></span>);
-
-    let isPan = false;
-
-    const args = {
-        pos:false,
-        range:range,
-        index:index,
-        setPos:setX,
-        container:container.current,
-        step:step,
-        gap:gap
-    };
+    const index = useRef(0);
+    const [scope,animate] = useAnimate();
+    const x = useMotionValue(0);
+    let slides = countToArray(max,-step);
+    const dotsContainer = useRef<HTMLUListElement>(null);
 
     useEffect(() => {
-        if(gap){
-            setX(window.innerWidth <= 430 ? gap : 0);
+        if(gap && step && max && window.innerWidth < 430){
+            slides = countToArray(max,-step, gap);
+            x.set(gap);
         }
-    },[gap])
+    },[])
 
-    //handles
-    const handlePanStart = (event:PointerEvent,info:PanInfo) => {
-        panStart && panStart();
-        const pos = info.delta.x > 0;
-        args.pos = pos;
+    function slide(left:boolean = false){
+        if(left && index.current > 0){
+            index.current--;
+        }else if(max && !left && index.current < max - 1){
+            index.current++;
+        }
 
-        onPanStart({info,isPan,args});
+        const dotList = dotsContainer.current?.getElementsByClassName("dot");
+        if(dotList){
+            for(let dot of dotList){
+                dot.classList.remove("current");
+            }
+
+            dotList[index.current].classList.add("current")
+        }
+
+        animate(
+            scope.current, 
+            { 
+                x: slides[index.current] + "px"
+            }, 
+            {
+                type: "tween",
+                duration: 0.3
+            }
+        );
     }
 
-    const handlePanEnd = () => {
-        panEnd && panEnd();
-        isPan = onPanEnd();
+    function handlePan(info: PanInfo){
+        const left = info.delta.x >= 0;
+        if(left){
+            slide(true);
+        }else{
+            slide();
+        }
+    }
+
+    const dots = [];
+    if(max){
+        for(let i = 0; i < max; i++){
+            const dot = <li key={i} className={`dot ${i == 0 ? "current" : ""}`}></li>;
+            dots.push(dot);
+        }
     }
 
     return (
@@ -76,17 +89,13 @@ export default function Slider<T>({children,className,panStart,panEnd,range,ref,
                     icon="arrow" 
                     size="m" 
                     className="arrow left rotate-back" 
-                    onClick={() => {
-                        args.pos = true;
-                        onClick(args);
-                    }} 
+                    onClick={() => slide(true)} 
                 />
-                <div className="content" ref={ref}>
+                <div className="content">
                     <motion.ul
-                        animate={{ x }} 
-                        onPanStart={handlePanStart} 
-                        onPanEnd={handlePanEnd} 
-                        transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                        style={{x}}
+                        onPanStart={(_,info) => {handlePan(info)}}
+                        ref={scope}
                         className="container"
                     >
                         {children}
@@ -96,14 +105,12 @@ export default function Slider<T>({children,className,panStart,panEnd,range,ref,
                     icon="arrow"
                     size="m" 
                     className="arrow right" 
-                    onClick={(e) => {
-                        onClick(args);
-                    }}
+                    onClick={() => slide()} 
                 />
             </div>
-            <div className="bottom" ref={container}>
+            <ul className="bottom" ref={dotsContainer}>
                 {dots}
-            </div>
+            </ul>
         </div>
     );
 }
