@@ -83,22 +83,35 @@ export default function Btn<T>({
   } as React.CSSProperties;
 
   const content = path ? (
-    <Link
-      href={path}
-      style={style}
-      className={`btn ${color} ${className}`}
-      onClick={onClick}
-    >
-      <div className="content">{children}</div>
+    <Link href={path} className="hover-effect">
+      <div
+        className="hover-layer"
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseLeave}
+      />
+      <div
+        style={style}
+        className={`btn ${color} ${className}`}
+        onClick={onClick}
+      >
+        <div className="content">{children}</div>
+      </div>
     </Link>
   ) : (
-    <button
+    <button className="hover-effect">
+    <div
+      className="hover-layer"
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+    />
+    <div
       style={style}
       className={`btn ${color} ${className}`}
       onClick={onClick}
     >
       <div className="content">{children}</div>
-    </button>
+    </div>
+  </button>
   );
 
   return (
