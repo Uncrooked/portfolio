@@ -1,5 +1,11 @@
-.slider{
+.slider, .slider .project-card{
     position:relative;
+    cursor:url("/img/cursor/slide-cursor.svg") 0 0, auto;
+}
+
+
+.slider:hover ~ #mouse-div, .slider .project-card:hover ~ #mouse-div{
+    display:none;
 }
 
 .slider .top{

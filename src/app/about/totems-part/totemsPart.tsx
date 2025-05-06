@@ -27,14 +27,14 @@ export default function TotemsPart() {
     const selected = useRef<number>(null);
     const oneIsShown = useRef(false);
     const [allStates,setAllStates] = useState(statesArray);
-    const modelsEl = models.map((param,index) => <Totem key={index} value={param} index={index} states={allStates[index]} setStates={setAllStates} selected={selected.current}oneIsShown={oneIsShown.current} />);
+    const modelsEl = models.map((param,index) => <Totem key={index} value={param} index={index} states={allStates[index]} setStates={setAllStates} selected={selected.current} oneIsShown={oneIsShown.current} />);
 
     return (
         <section id="totems-part" className="no-max-width">
 
             <Canvas style={{ width: '100%', height: '100vh' }} className="canvas">
                 <Suspense fallback={<LoaderThree/>}>
-                {modelsEl}
+                    {modelsEl}
                 </Suspense>
                 <ambientLight intensity={1} />
                 <directionalLight position={[5, 5, 50]} color="white" intensity={1} />

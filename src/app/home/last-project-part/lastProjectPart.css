@@ -22,9 +22,11 @@
     flex-direction: column;
 }
 
-#last-project-part .right .categories .btn{
-    margin-bottom:var(--two-xs-size);
+#last-project-part .right .categories .hover-effect,#last-project-part .right .categories .hover-effect .btn{
     width:100%;
+}
+#last-project-part .right .categories .hover-effect{
+    margin-bottom:var(--two-xs-size);
 }
 
 /*————————————————RESPONSIVE—————————————————*/

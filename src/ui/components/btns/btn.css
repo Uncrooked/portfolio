@@ -68,6 +68,31 @@
 }
 /*--*/
 
+/*——————————————————HOVER EFFECT——————————————————————*/
+
+.hover-effect:hover .btn{
+    filter:brightness(1.1);
+    box-shadow:0 0 50px rgba(255,255,255,0.3);
+    z-index:0;
+    position:relative;
+}
+
+.hover-effect{
+    position:relative;
+    width:fit-content;
+}
+
+.hover-effect .hover-layer{
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    position:absolute;
+    padding:20px;
+    box-sizing: content-box;
+    height:100%;
+    width:100%;
+    z-index:1;
+}
 
 /*——————————————————RESPONSIVE——————————————————————*/
 

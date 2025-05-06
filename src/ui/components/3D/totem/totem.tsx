@@ -80,7 +80,7 @@ export default function Totem({value,index,setStates,selected,states,oneIsShown}
             >
                 <Model
                 ref={totem}
-                path={"https://leomurail.digital/assets/models/portfolio/totem-" + (index + 1) + ".glb"}
+                path={"https://leomurail.fr/assets/models/portfolio/totem-" + (index + 1) + ".glb"}
                 args={value}
                 />
                 <mesh scale={[0.3,0.3,0.3]} position={[value.position ? value.position.x : 0 , 8, 0]}>
