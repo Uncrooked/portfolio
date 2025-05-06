@@ -19,7 +19,7 @@ export default function Logo3d(){
 
     return(
         <Suspense fallback={<LoaderThree/>}>
-            <Model path="https://leomurail.digital/assets/models/portfolio/logo.glb" ref={ref}/>
+            <Model path="https://leomurail.fr/assets/models/portfolio/logo.glb" ref={ref}/>
         </Suspense>
     )
 }

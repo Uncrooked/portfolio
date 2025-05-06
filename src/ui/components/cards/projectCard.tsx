@@ -24,7 +24,7 @@ export default function ProjectCard({
     title,
     thumbnail,
     tags,
-    href = "https://leomurail.fr"
+    href = "https://leomurail.com"
 }:cardProps){
 
     const args = {
