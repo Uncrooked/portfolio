@@ -14,15 +14,15 @@
     min-width: 250px;
 }
 
-#contact form button:after{
+#contact form .btn:after{
     background-color: var(--purple-color);
 }
 
-#contact form button{
+#contact form .btn{
     background-color: var(--white-color);
 }
 
-#contact form button div.content, #contact form button div.content i svg, #contact form button div.content i{
+#contact form .btn div.content, #contact form .btn div.content i svg, #contact form .btn div.content i{
     color:var(--purple-color) !important;
 }
 
