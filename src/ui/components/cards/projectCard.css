@@ -4,7 +4,7 @@
     border-radius:var(--xl-size);
     transition:all 0.3s;
     max-width:min(calc(100vw - (2 * var(--two-xs-size))),350px);
-    min-width:300px;
+    min-width:350px;
     width:fit-content;
 }
 

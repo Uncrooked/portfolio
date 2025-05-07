@@ -32,7 +32,6 @@ interface props{
 
 export default function CardSliderContent({content}:props){
 
-    const target = useRef<HTMLDivElement>(null);
     const [step,setStep] = useState({
         max:0,
         length:0
@@ -57,7 +56,7 @@ export default function CardSliderContent({content}:props){
         const stepLength = window.innerWidth;
         setStep({
             length:stepLength,
-            max:Math.floor(width / stepLength)
+            max:window.innerWidth > 430 ? Math.ceil(width / stepLength) : Math.floor(width / stepLength)
         });
     },[content.length])
 
