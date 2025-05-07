@@ -3,9 +3,10 @@
     padding:var(--s-size);
     border-radius:var(--xl-size);
     transition:all 0.3s;
-    max-width:min(calc(100vw - (2 * var(--two-xs-size))),350px);
+    max-width:min(calc(100vw - (2 * var(--two-xs-size))),300px);
     min-width:350px;
     width:fit-content;
+    box-sizing: border-box;
 }
 
 .project-card .container-img img,.content .project-card .container-img img{

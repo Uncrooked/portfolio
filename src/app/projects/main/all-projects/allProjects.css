@@ -1,13 +1,13 @@
 .all-projects{
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-auto-rows: fit-content;
     gap:var(--s-size);
+    width:100%;
 }
 
-.all-projects .project-card, .all-projects .project-card-parent{
-    width:100%;
-    min-width:400px;
+.all-projects .project-card, .all-projects .project-card-parent, .all-projects .project-card, .all-projects li{
+    max-width:100%;
+    min-width:350px;
 }
 
 @media(max-width:1024px){
