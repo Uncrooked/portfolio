@@ -1,7 +1,7 @@
 "use server"
 
 //components
-import StrateSlider from "./StrateSlider";
+import StrateSlider from "./strateSlider";
 import ProjectCard from "@/ui/components/cards/projectCard";;
 
 //db

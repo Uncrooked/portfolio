@@ -67,7 +67,7 @@ export default async function Page({
                 <div className="tags">
                     {
                         data.tags_join.map((param,index) => 
-                            <Tag key={index}>{param.tags.name}</Tag>
+                            <Tag style="normal" key={index}>{param.tags.name}</Tag>
                         )
                     }
                 </div>
@@ -78,7 +78,7 @@ export default async function Page({
                     <Btn path={data.url} >Voir le projet</Btn>
                     {
                         otherUrl && otherUrl.map((param,index) => 
-                            <Btn key={index} color="light-blue" path={param.url}>{param.label}</Btn>
+                            <Btn key={index} color="blue" path={param.url}>{param.label}</Btn>
                         )
                     }
                 </div>

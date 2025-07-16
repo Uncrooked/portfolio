@@ -40,7 +40,7 @@ export default function ContactForm() {
             <TextInput label="Entreprise" name="entreprise" />
             <SelectInput label="Demande" name="demand" options={options}/>
             <TextAreaInput label="Message" name="message" />
-            <Btn color="white">Envoyer<Image src="/img/icons/purple/plane.svg" alt="send message icon plante" width={20} height={20}/></Btn>
+            <Btn color="glass">Envoyer<Image src="/img/icons/purple/plane.svg" alt="send message icon plante" width={20} height={20}/></Btn>
         </Form>
     );
 }
