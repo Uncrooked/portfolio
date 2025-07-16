@@ -22,7 +22,7 @@ export default function ContentVideo(){
     return(
     
         <section className="bottom content-video">
-            <h3>Brand content</h3>
+            <h3>BRAND CONTENT</h3>
             <p className="sub-title">©made by @leomurail</p>
             <ul className="row-conents">
                 {rowContentsEl}

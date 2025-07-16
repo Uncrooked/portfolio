@@ -10,7 +10,7 @@ import "./historyPart.css";
 export default function HistoryPart(){
     return(
         <section id="history">
-            <h2 className={fonts.orbitron.className}>Mon histoire</h2>
+            <h2 className={fonts.montserrat.className}>Mon histoire</h2>
             <div className="container">
                 <div className="left">
                     <h3>Enchanté, je m'appelle Léo Murail.</h3>

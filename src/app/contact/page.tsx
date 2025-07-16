@@ -12,7 +12,7 @@ export default function Page(){
     return(
         <section id="contact" className="no-max-width">
             <div className="desktop main">
-                <h1 className={fonts.orbitron.className}>ME CONTACTER</h1>
+                <h1 className={fonts.imperial.className}>ME CONTACTER</h1>
                 <div className="main-content">
                     <ContactForm/>
                     <Info/>

@@ -16,7 +16,7 @@ interface props {
 export default function RowContent({img,iframe,reverse = false}:props){
     return(
         <div className={`row-content ${reverse && "reverse"}`}>
-            <Image src={img} alt={`${img} du portfolio de Léo Murai`} width={450} height={450}/>
+            <Image src={img} alt={`${img} du portfolio de Léo Murail`} width={450} height={450}/>
             <Iframe src={iframe} height={600}/>
         </div>
     )

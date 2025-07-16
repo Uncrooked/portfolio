@@ -9,7 +9,7 @@ import "./btn.css";
 
 interface Props<T> {
   children: React.ReactNode;
-  color?: string;
+  color?: "blue" | "glass" | "grey";
   path?: string;
   onClick?: () => T;
   className?: string;
@@ -22,73 +22,39 @@ export default function Btn<T>({
   onClick,
   className,
 }: Props<T>) {
-  const targetPos = useRef({ x: 0, y: 0 });
-  const currentPos = useRef({ x: 0, y: 0 });
-  const animationFrame = useRef<number>(0);
-  const btnRef = useRef<HTMLElement | null>(null);
 
-  function handleMouseMove(event: React.MouseEvent<HTMLDivElement>) {
-    const hoverLayer = event.currentTarget;
-    const btn = hoverLayer
-      .closest(".hover-effect")
-      ?.getElementsByClassName("btn")[0] as HTMLElement;
+  let borderColor = "";
+  let backgroundColor = "";
+  let backgroundColorHover = "";
 
-    if (!btn) return;
-
-    // Stocke la référence au bouton pour éviter de la rechercher à chaque frame
-    if (!btnRef.current) btnRef.current = btn;
-
-    const pos = hoverLayer.getBoundingClientRect();
-    const x = event.clientX - pos.left - hoverLayer.clientWidth / 2;
-    const y = event.clientY - pos.top - hoverLayer.clientHeight / 2;
-
-    // Position cible lissée
-    targetPos.current = { x: x / 4, y: y / 4 };
-
-    // Démarre l'animation une seule fois
-    if (!animationFrame.current) {
-      animationFrame.current = requestAnimationFrame(animateBtn);
-    }
+  switch (color){
+    case "glass":
+      borderColor = `var(--white-color)`;
+      backgroundColor = `rgba(235,235,235,0.15)`;
+      backgroundColorHover = `rgba(235,235,235,0.40)`;
+      break;
+    case "grey":
+      borderColor = `var(--light-grey-color)`;
+      backgroundColor = `var(--dark-grey-color)`;
+      backgroundColorHover = `var(--grey-color)`;
+      break;
+    default:
+      borderColor = `var(--light-${color}-color)`;
+      backgroundColor = `var(--${color}-color)`;
+      backgroundColorHover = `var(--light-${color}-color)`;
+      break;
   }
 
-  function animateBtn() {
-    const speed = 0.5; // plus c'est bas, plus le mouvement est fluide
-
-    currentPos.current.x +=
-      (targetPos.current.x - currentPos.current.x) * speed;
-    currentPos.current.y +=
-      (targetPos.current.y - currentPos.current.y) * speed;
-
-    if (btnRef.current) {
-      btnRef.current.style.left = `${currentPos.current.x}px`;
-      btnRef.current.style.top = `${currentPos.current.y}px`;
-    }
-
-    animationFrame.current = requestAnimationFrame(animateBtn);
-  }
-
-  function handleMouseLeave() {
-    if (animationFrame.current) {
-      cancelAnimationFrame(animationFrame.current);
-      animationFrame.current = 0;
-    }
-  }
 
   const style = {
-    "--color": `var(--${color}-color)`,
-    "--dark-color":
-      color.split("-")[0] === "light"
-        ? `var(--${color.split("-")[1]}-color)`
-        : `var(--dark-${color}-color)`,
+    "--color": `var(--dark-${color}-color)`,
+    "--background-color": backgroundColor,
+    "--background-color-hover": backgroundColorHover,
+    "--border-color": borderColor,
   } as React.CSSProperties;
 
   const content = path ? (
-    <Link href={path} className="hover-effect" onClick={onClick}>
-      <div
-        className="hover-layer"
-        onMouseMove={handleMouseMove}
-        onMouseLeave={handleMouseLeave}
-      />
+    <Link href={path} onClick={onClick}>
       <div
         style={style}
         className={`btn ${color} ${className}`}
@@ -97,19 +63,12 @@ export default function Btn<T>({
       </div>
     </Link>
   ) : (
-    <button className="hover-effect" onClick={onClick}>
-    <div
-      className="hover-layer"
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
-    />
-    <div
+    <button  
       style={style}
       className={`btn ${color} ${className}`}
       onClick={onClick}
     >
       <div className="content">{children}</div>
-    </div>
   </button>
   );
 

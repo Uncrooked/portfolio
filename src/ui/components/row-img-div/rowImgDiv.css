@@ -14,6 +14,24 @@
     padding-inline:var(--s-size);
     max-height:100%;
     overflow-y: scroll;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.row-img-div .left h3{
+    font-size:var(--h2-font-size);
+    text-transform:uppercase;
+}
+
+.row-img-div .left h3, .row-img-div .left p{
+    width:100%;
+}
+
+@media(min-width:1300px){
+    .row-img-div .left h3, .row-img-div .left p{
+        width:calc((var(--desktop-max-width) / 2) - 40px);
+    }
 }
 
 .row-img-div::after{
@@ -50,6 +68,9 @@
 
 .row-img-div.reverse .left{
     order: 1;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .row-img-div.reverse img{

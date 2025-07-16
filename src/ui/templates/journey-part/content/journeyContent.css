@@ -10,6 +10,11 @@
     background-color: var(--black-color);
 }
 
+#journey-content h2{
+    text-transform:uppercase;
+    font-size:var(--h2-font-size);
+}
+
 #journey-content .top{
     display:flex;
     align-items: start;
@@ -18,6 +23,11 @@
 
 #journey-content .top p{
     font-size:var(--xl-font-size);
+}
+
+#journey-content .current-period{
+    font-size:60px !important;
+    line-height:30px;
 }
 
 #journey-content .all-dates .container{

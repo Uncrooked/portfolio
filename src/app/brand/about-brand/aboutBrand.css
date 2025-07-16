@@ -1,9 +1,5 @@
 #about-brand h2{
-    font-size:var(--h1-font-size);
+    font-size:var(--h2-font-size);
     padding-inline: var(--xs-size);
     margin-bottom:var(--l-size);
-}
-
-#about-brand h3{
-    font-size:var(--h5-font-size);
 }

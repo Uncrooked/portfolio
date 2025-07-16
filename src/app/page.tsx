@@ -16,9 +16,6 @@ export default function Page(){
     <section id="home" className="no-max-width">
       <HeroPart/>
       <SentencePart/>
-      <Suspense fallback={<SkeletonLoading width="100vw" height="800px" />}>
-        <LastProjectPart/>
-      </Suspense>
       <ProjectPart/>
       <JourneyPart/>
       <BrandPart/>

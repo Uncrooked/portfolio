@@ -6,3 +6,7 @@
     justify-content: space-around;
     padding-block:var(--xl-size);
 }
+
+#skills h2{
+    text-transform:uppercase;
+}

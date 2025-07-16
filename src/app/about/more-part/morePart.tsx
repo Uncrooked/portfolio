@@ -13,8 +13,8 @@ import "./morePart.css";
 export default function MorePart(){
     return(
         <>
-            <section id="more-part" className="no-max-width">
-                <h2 className={fonts.orbitron.className}>En savoir un peu plus</h2>
+            <section id="more-part">
+                <h2>En savoir <span className={fonts.imperial.className}>un peu plus</span></h2>
                 <div className="row-content">
                     <h3>Pourquoi le digital ?</h3>
                     <p>La première raison est que c’est un domaine, dans le cadre de l’entrepreneuriat, qui permet de créer des projets ayant un impact considérable dans notre monde, sans nécessiter des levées de fonds à 1 million d’euros, et offrant un fort potentiel de scalabilité énorme. Ensuite, j’ai toujours aimé travailler sur un ordinateur. Enfin, j’ai développé une véritable passion pour les différents domaines qui composent ce secteur.</p>

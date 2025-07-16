@@ -1,10 +1,10 @@
 //fonts
-import { Montserrat, Orbitron } from 'next/font/google';
+import { Montserrat, Imperial_Script } from 'next/font/google';
 
 const montserrat = Montserrat({subsets:['latin']});
-const orbitron = Orbitron({subsets:['latin']});
+const imperial = Imperial_Script({subsets:['latin'],weight:"400"});
 
 export const fonts = {
   "montserrat":montserrat,
-  "orbitron":orbitron
+  "imperial":imperial
 };

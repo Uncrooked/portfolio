@@ -4,6 +4,7 @@
 
 #brand-part h2{
     margin-bottom:var(--xl-size);
+    font-size:var(--h2-font-size);
 }
 
 #brand-part .bento div.bento-item{

@@ -21,6 +21,6 @@ interface props {
 
 export default function HeaderLink({children,path,icon} : props){
     return(
-        <Link onClick={removeHeader} href={path} className={`header-link ${fonts.orbitron.className}`}> <Image src={`img/icons/white/${icon}.svg`} width={50} height={50} alt="icon prenant la lettre de léo murail pour les liens de son portfolio dans le header"/> {children}</Link>
+        <Link onClick={removeHeader} href={path} className={`header-link ${fonts.montserrat.className}`}>{children}</Link>
     )
 }

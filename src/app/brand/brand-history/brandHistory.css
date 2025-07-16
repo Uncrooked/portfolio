@@ -4,4 +4,12 @@
 
 #brand-history h2{
     margin-bottom:var(--l-size);
+    text-transform: uppercase;
+    font-size:var(--h2-font-size);
+}
+
+#brand-history h2 span{
+    font-size:80px;
+    line-height:0;
+    text-transform: lowercase;
 }

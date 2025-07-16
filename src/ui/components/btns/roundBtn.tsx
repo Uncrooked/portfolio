@@ -17,7 +17,7 @@ interface props{
   size: "s" | "m" | "l" | "xl";
   onClick?: (e:React.MouseEvent) => void;
   display?:boolean;
-  className?:string
+  className?:string;
 }
 
 export default function RoundBtn({ path, icon, size, display = true, onClick = () => {},className = "" }: props) {

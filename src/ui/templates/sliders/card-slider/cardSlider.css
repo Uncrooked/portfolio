@@ -1,75 +1,34 @@
-.card-slider {
-    width:100vw;
-    overflow: hidden;
-}
-
-.card-slider .content{
-    width:var(--desktop-max-width);
-    margin: auto;
-    overflow: visible !important;
-}
-
-.card-slider .content ul.container{
-    min-height:100px;
+.card-slider{
+    display:flex;
+    align-items: center;
     gap:var(--s-size);
-}
-
-.card-slider .content ul.container li .project-card-parent, .card-slider .content ul.container li .project-card{
-    height:100%;
-}
-
-.card-slider ul.bottom{
-    justify-content: start;
-    max-width:var(--desktop-max-width);
-    margin:auto;
-    padding-inline: var(--two-xs-size);
-    margin-top:var(--xs-size);
-}
-
-.card-slider .arrow{
     position:relative;
 }
 
-.card-slider .arrow.left{
-    left:var(--two-xs-size);
+.card-slider .slider-content{
+    display:flex;
+    overflow-x:scroll;
+    padding-block:var(--s-size);
+    gap:var(--s-size);
+    z-index:0;
+    padding-inline:max(calc((((100vw) - 1200px) / 2)),10px) ;
 }
 
-.card-slider .arrow.right{
-    right:var(--two-xs-size);
-}
-
-/*———————————————————————NO PROJECTS———————————————————————————*/
-
-.card-slider.nothing .content .container{
-    width:100%;
-    background-color:var(--dark-grey-color);
-    border-radius:var(--xs-size);
-}
-
-.card-slider.nothing .content .container::before{
-    content:"no projects";
-    background-color:var(--white-color);
-    height:fit-content;
-    margin:var(--xs-size);
-    padding:var(--three-xs-size);
-    border-radius:var(--three-xs-size);
-    color:var(--black-color);
-    font-weight:600;
-    font-size:var(--s-font-size);
-}
-
-.card-slider.nothing .arrow, .card-slider.nothing .dot{
+.card-slider .slider-content::-webkit-scrollbar{
     display:none;
 }
 
-/*———————————————————————RESPONSIVE———————————————————————————*/
+.card-slider .round-btn{
+    position:absolute;
+    z-index:2;
+}
 
-@media(max-width:1200px){
-    .card-slider .arrow{
-        position:absolute;
-    }
+.card-slider .round-btn:first-child{
+    left:10px;
+    transform:rotate(180deg);
+}
 
-    .card-slider{
-        padding-inline:var(--two-xs-size);
-    }
+
+.card-slider .round-btn:last-child{
+    right:10px;
 }

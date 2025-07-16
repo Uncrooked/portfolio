@@ -1,5 +1,14 @@
 .project-cat{
     display:flex;
     flex-direction: column;
+}
+
+.project-cat .title{
+    display:flex;
     gap:var(--s-size);
+}
+
+.project-cat .title h3{
+    font-size:32px;
+    font-weight:500;
 }

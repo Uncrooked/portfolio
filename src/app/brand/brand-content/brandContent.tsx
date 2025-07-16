@@ -13,7 +13,7 @@ export default function BrandContent(){
         <section id="brand-content" className="no-max-width">
             <div className="top">
                 <div className="content desktop">
-                    <h2 className={fonts.orbitron.className}>LA CRÉATION DE CONTENU</h2>
+                    <h2>LA CRÉATION DE <span className={fonts.imperial.className}>contenu</span></h2>
                 </div>
             </div>
             <div className="center desktop">

@@ -6,6 +6,10 @@
     padding-block: var(--four-xl-size) var(--three-xl-size);
 }
 
+#sentence-part h2 span{
+    font-size:100px;
+}
+
 #sentence-part ul.sentence{
     display:flex;
     flex-wrap:wrap;

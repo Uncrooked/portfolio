@@ -11,7 +11,7 @@ import "./brandPart.css";
 export default function BrandPart(){
     return(
         <section id="brand-part">
-            <h2 className={fonts.orbitron.className}>MA MARQUE</h2>
+            <h2 className={fonts.montserrat.className}>MA MARQUE</h2>
             <div className="bento">
                 <div className="top bento-item"></div>
                 <div className="bottom">

@@ -3,18 +3,20 @@
     place-items: center;
     width:fit-content;
     padding:var(--s-size);
-    border-radius:var(--xs-size);
+    border-radius:8px;
     text-decoration: none;
     font-weight:bold;
     font-size:var(--m-font-size);
     transition:all 0.4s;
 
-    background-color:var(--color);
+    background-color:var(--background-color);
+    border:solid 0.5px var(--border-color);
+
+    backdrop-filter: blur(10px);
 }
 
-.hover-effect:hover .btn{
-    border-radius:var(--xl-size);
-    background-color:var(--dark-color);
+.btn:hover{
+    background-color:var(--background-color-hover);
 }
 
 .btn div.content{
@@ -37,7 +39,7 @@
     background-color: white;
 }
 
-.hover-effect:hover .btn::after{
+.btn:hover::after{
     width:100%;
 }
 
@@ -46,59 +48,20 @@
 }
 
 /*Grey*/
-.grey{
-    background-color:var(--grey-color);
-}
 
 .grey::after{
     background-color: var(--white-color);
 }
-
-.hover-effect:hover .grey{
-    background-color:var(--white-color);
-}
-
-.hover-effect:hover .grey::after{
-    background-color: var(--blue-color);
-}
-
-.hover-effect:hover .grey div{
-    color:var(--blue-color)
-}
 /*--*/
-
-/*——————————————————HOVER EFFECT——————————————————————*/
-
-.hover-effect:hover .btn{
-    filter:brightness(1.1);
-    box-shadow:0 0 50px rgba(255,255,255,0.3);
-    z-index:0;
-    position:relative;
-}
-
-.hover-effect{
-    border:none;
-    position:relative;
-    width:fit-content;
-    background-color:transparent;
-}
-
-.hover-effect .hover-layer {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    position: absolute;
-    padding: 10px;
-    box-sizing: content-box;
-    height: 100%;
-    width: 100%;
-    z-index: 1;
-}
 
 /*——————————————————RESPONSIVE——————————————————————*/
 
 @media(max-width:425px){
     .btn{
         padding:var(--xs-size);
+    }
+
+    .btn div.content{
+        font-size:var(--s-font-size);
     }
 }

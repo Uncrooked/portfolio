@@ -12,7 +12,7 @@ export default function LastCta(){
     return(
         <section id="last-cta" className="no-max-width">
             <div className="content desktop">
-                <h2 className={fonts.orbitron.className}>CLIVER.FR</h2>
+                <h2>CLIVER.FR</h2>
                 <Btn path="https://cliver.fr">Voir le site<Icon picked="eye"/></Btn>
             </div>
         </section>

@@ -15,8 +15,9 @@
 
     background:url("/img/backgrounds/background-header-overlay.svg");
     background-repeat: no-repeat;
-    background-position: 65vw 35vh;
+    background-position: 65vw 50vh;
     background-color:var(--black-color);
+    background-size:60%;
 
     animation-name: header-overlay-anim;
     animation-duration:0.5s;
@@ -37,7 +38,12 @@
 #overlay .left{
     display:flex;
     flex-direction: column;
-    gap:var(--m-size);
+}
+
+#overlay .left li, #overlay .left li a{
+    height:100%;
+    display:flex;
+    align-items: center;
 }
 
 #overlay .right{
@@ -47,6 +53,21 @@
     max-width:550px;
 }
 
+#overlay .right h2 span{
+    font-size:70px;
+    line-height:0px;
+}
+
+#overlay .right h2{
+    font-size:var(--h4-font-size);
+}
+
+#overlay .right p{
+    font-size:var(--l-font-size);
+    font-weight:500;
+    line-height:1.5;
+}
+
 #overlay .right .social-medias{
     display:flex;
     gap:var(--xs-size);
@@ -54,31 +75,32 @@
 
 /*———————————————RESPONSIVE—————————————————*/
 
-@media(max-width:425px){
+@media(max-width:768px){
+
     #overlay{
-        padding-top:var(--three-xl-size);
-        padding-inline:10px;
-        flex-direction: column;
-        display:flex;
-        gap:var(--s-size);
+        grid-template-columns: 1fr;
+        grid-template-rows: 55% 45%;
+        padding-inline:20px;
+        background-image:none;
+        gap:var(--two-xs-size);
+        padding-top:120px;
     }
 
+
     #overlay .left{
-        gap:var(--xs-size);
-        height: fit-content;
+        height: 100%;
     }
 
     #overlay .right{
-        gap:var(--two-xs-size);
-    }
-
-    #overlay .right h2{
-        font-size:var(--h4-font-size);
-    }
-
-    #overlay .right ul.social-medias{
         margin-top:var(--xs-size);
     }
-}
 
+    #overlay .right .social-medias{
+        margin-top:0 !important;
+    }
+
+    #overlay .right h2, #overlay .right p{
+        display:none;
+    }
+}
 /*—————————————————————————————————————————-*/

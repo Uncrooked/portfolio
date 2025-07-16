@@ -17,7 +17,7 @@ export default function Filters({categories,setCurrent}:props){
 
     const filterBtns = categories.map((param,index) => (
         <li className="filter" key={index}>
-            <Btn path={`#${param.slug}`} color={param.color} onClick={() => {setCurrent(param.slug)}}> 
+            <Btn path={`#${param.slug}`} color="grey" onClick={() => {setCurrent(param.slug)}}> 
                 {param.name} <Icon picked="eye" />
             </Btn>
         </li>

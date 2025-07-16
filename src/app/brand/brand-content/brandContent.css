@@ -8,3 +8,8 @@
 #brand-content .center, #brand-content .top{
     padding-block:var(--three-xl-size);
 }
+
+#brand-content h2 span{
+    font-size:80px;
+    line-height: 0;
+}

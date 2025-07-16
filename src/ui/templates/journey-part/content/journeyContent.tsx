@@ -38,10 +38,10 @@ export default function JourneyContent({scrollY,target}:props){
                 <div>
                     <div className="top desktop">
                         <div className="left">
-                            <h2 className={fonts.orbitron.className}>Mon parcours</h2>
-                            <p className="current-period">Nom de la periode</p>
+                            <h2 className={fonts.montserrat.className}>Mon parcours</h2>
+                            <p className={"current-period " + fonts.imperial.className}>prossionnel</p>
                         </div>
-                        <Btn color="light-blue" path="/about">
+                        <Btn color="blue" path="/about">
                             En entier
                             <Icon picked="arrow"/>
                         </Btn>

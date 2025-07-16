@@ -2,8 +2,8 @@
 import { Suspense } from "react";
 
 //components
-import CatTitle from "./catTitle";
-import CardSlider from "@/ui/templates/sliders/card-slider/cardSlider.server";
+import Icon from "@/ui/components/illu/icon";
+import CardSlider from "@/ui/templates/sliders/card-slider/cardSlider";
 import Btn from "@/ui/components/btns/btn";
 import SkeletonLoading from "@/ui/components/loading/skeleton-loading/skeletonLoading";
 
@@ -20,16 +20,31 @@ interface props {
 
 export default function ProjectCat({cat}:props){
     const current = catsData[cat];
+
+    let pickedIcon = "";
+
+    switch(current.slug){
+        case "web-development":
+            pickedIcon = "code-editing";
+            break;
+        case "print-design":
+            pickedIcon = "print-design";
+            break;
+        case "web-design":
+            pickedIcon = "web-design";
+            break;
+    }
     return(
         <div className="project-cat">
-            <section className="min-width">
-                <CatTitle title={current.title} color={current.color}/>
-            </section>
+            <div className="desktop title">
+                {pickedIcon && <Icon size={45} picked={pickedIcon}/>}
+                <h3>{current.title}</h3>
+            </div>
             <Suspense fallback={<SkeletonLoading width="90vw" height="440px" borderRadius={20} className="center"/>}>
-                <CardSlider category_id={current.category_id}/>
+                <CardSlider categoryId={current.category_id} step={300}/>
             </Suspense>
             <section className="min-width">
-                <Btn path="/projects" color={current.color} >Voir plus</Btn>
+                <Btn path="/projects" color="grey" >Voir plus</Btn>
             </section>
         </div>
     )

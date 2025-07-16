@@ -3,6 +3,13 @@ import Image from "next/image";
 export const links = [
     {
       params: {
+        path: "/",
+        icon: "l",
+      },
+      children: "ACCUEIL",
+    },
+    {
+      params: {
         path: "/about",
         icon: "l",
       },

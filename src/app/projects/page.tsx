@@ -41,14 +41,12 @@ export default async function Page(){
     }));
 
     const categories : Category[] = (await prisma.categories.findMany()).map(param => ({
-        id:param.id,
         name:param.name,
         slug:param.slug,
         color:param.color
     }));
 
     categories.splice(0,0,{
-        id:0,
         name:"Tout",
         slug:"all",
         color:"yellow"

@@ -29,7 +29,7 @@ export default function HeaderBar(){
                 </Link>
 
                 <div className="right">
-                    <Btn path="/contact" color="grey" onClick={removeHeader}>Contact</Btn>
+                    {/* <Btn path="/contact" color="grey" onClick={removeHeader}>Contact</Btn> */}
                     <div onClick={setOverlay} id="menu-btn">
                         <RoundBtn className="burger-menu" path="#" icon="burger-menu" size="l" display={true}/>
                         <RoundBtn className="cross-menu" path="#" icon="cross-menu" size="l" display={false} />

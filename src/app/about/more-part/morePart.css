@@ -4,7 +4,19 @@
     padding:var(--three-xl-size) var(--s-size);
 }
 
+#more-part h2{
+    text-transform: uppercase;
+}
+
+#more-part h2 span{
+    font-size:80px;
+    line-height:0;
+    text-transform: lowercase;
+}
+
 #more-part h3{
     font-size:var(--h5-font-size);
     margin-bottom:var(--two-xs-size);
+    font-weight:500;
+    width:100%;
 }

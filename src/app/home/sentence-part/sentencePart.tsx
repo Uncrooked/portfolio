@@ -53,7 +53,7 @@ export default function SentencePart(){
 
     return(
         <motion.section id="sentence-part" ref={sentencePartEl}>
-            <h2 className={fonts.orbitron.className}>En une phrase</h2>
+            <h2 className={fonts.montserrat.className}>En une <span className={fonts.imperial.className}>phrase</span></h2>
             {sentenceEl}
             <motion.div 
             style={{rotate,alignSelf:"end"}}

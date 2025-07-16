@@ -6,13 +6,13 @@ import React, { useRef, useEffect } from "react";
 import { motion, PanInfo } from "framer-motion";
 
 // components
-import RoundBtn from "../../components/btns/roundBtn";
+import RoundBtn from "../../../components/btns/roundBtn";
 
 // styles
-import "./slider.css";
+import "./imgSlider.css";
 
 //utils
-import { countToArray } from "./utils";
+import { countToArray } from "../utils";
 
 interface props<T>{
     children:React.ReactNode;

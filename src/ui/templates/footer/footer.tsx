@@ -14,12 +14,12 @@ export default function Footer(){
             <div className="top desktop">
                 <Image src="/img/main-logo.svg" alt="Logo du portfolio de Léo Murail" width={148} height={85} />
                 <div className="item">
-                    <h2 className={fonts.orbitron.className}>Professionnel</h2>
+                    <h2 className={fonts.imperial.className}>Professionnel</h2>
                     <Link href="/projects">Mes projets</Link>
                     <Link href="/brand">Ma marque</Link>
                 </div>
                 <div className="item">
-                    <h2 className={fonts.orbitron.className}>En savoir plus</h2>
+                    <h2 className={fonts.imperial.className}>En savoir plus</h2>
                     <Link href="/contact">Contact</Link>
                     <Link href="/about">À propos</Link>
                 </div>

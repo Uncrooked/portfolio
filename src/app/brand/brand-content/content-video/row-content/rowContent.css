@@ -3,7 +3,7 @@
     flex-wrap:wrap;
     align-items: center;
     justify-content: center;
-    gap:var(--xl-size);
+    gap:var(--l-size);
 }
 
 .row-content.reverse{

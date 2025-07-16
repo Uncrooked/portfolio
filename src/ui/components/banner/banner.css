@@ -16,7 +16,8 @@
 }
 
 #banner p.sub-title{
-    font-size:var(--h4-font-size);
+    font-size:80px;
+    line-height:40px;
 }
 
 /*————————————————RESPONSIVE——————————————————-*/

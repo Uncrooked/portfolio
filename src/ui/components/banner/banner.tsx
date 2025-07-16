@@ -17,8 +17,8 @@ export default function Banner({title,subTitle,bgColor}:props){
     return(
         <section id="banner" style={cssVar} className="no-max-width">
             <div className="desktop">
-                <h1 className={`title ${fonts.orbitron.className}`}>{title}</h1>
-                <p className="sub-title">{subTitle}</p>
+                <h1 className={`title ${fonts.montserrat.className}`}>{title}</h1>
+                <p className={`sub-title ${fonts.imperial.className}`}>{subTitle}</p>
             </div>
         </section>
     )

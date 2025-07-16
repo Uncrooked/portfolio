@@ -22,7 +22,7 @@ export default function Info(){
                 <PerspectiveCamera makeDefault position={[0,0,20]} near={0.1} far={5000}/>
                 <OrbitControls enableZoom={false}/>
             </Canvas>
-            <h2 className={fonts.orbitron.className}>Nantes</h2>
+            <h2 className={fonts.imperial.className}>Nantes</h2>
             <p className="email-info">contact@leomurail.fr</p>
         </div>
     )
