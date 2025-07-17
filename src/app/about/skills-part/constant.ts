@@ -46,6 +46,19 @@ export const skills = {
             {
                 name:"Godot",
                 path:"/img/illu/apps/coding/godot.webp"
+            },
+            {
+                name:"Symfony",
+                path:"/img/illu/apps/coding/symfony.webp"
+            },
+            {
+                name:"Twig",
+                path:"/img/illu/apps/coding/twig.webp"
+            }
+            ,
+            {
+                name:"Docker",
+                path:"/img/illu/apps/coding/docker.webp"
             }
         ]
     },
