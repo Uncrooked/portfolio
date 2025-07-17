@@ -10,11 +10,12 @@ export const catsData = {
         title:"Design web",
         slug:"web-design",
         category_id:2,
-    },
-    printDesign:{
-        color:"red",
-        title:"Design print",
-        slug:"print-design",
-        category_id:3,
     }
+    // ,
+    // printDesign:{
+    //     color:"red",
+    //     title:"Design print",
+    //     slug:"print-design",
+    //     category_id:3,
+    // }
 }
