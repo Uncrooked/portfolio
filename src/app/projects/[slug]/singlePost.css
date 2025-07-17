@@ -35,7 +35,7 @@
 }
 
 #single-post img{
-    border-radius:var(--m-size);
+    border-radius:var(--xs-size);
 }
 
 /*————————————————RESPONSIVE——————————————————-*/

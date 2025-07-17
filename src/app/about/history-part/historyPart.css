@@ -8,7 +8,7 @@
 }
 
 #history .container{
-    margin-top:var(--l-size);
+    margin-top:var(--m-size);
     display:grid;
     align-items: center;
     grid-template-columns: 1fr 1fr;
@@ -27,11 +27,12 @@
     display:flex;
     gap:var(--xs-size);
     align-items: center;
+    flex-wrap:wrap;
+    margin-block:var(--s-size);
 }
 
 #history .container .left .container-img img{
     border-radius:var(--two-xs-size);
-    margin-block:var(--s-size);
 }
 
 #history .container > img{

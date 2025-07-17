@@ -26,7 +26,7 @@
 }
 
 #journey-content .current-period{
-    font-size:60px !important;
+    font-size:80px !important;
     line-height:30px;
 }
 
@@ -53,5 +53,14 @@
 
     #journey-content .timeline-date{
         margin-block:var(--l-size);
+    }
+
+    #journey-content h2{
+        font-size:var(--h3-font-size);
+    }
+    
+
+    #journey-content .current-period{
+        font-size:60px !important;
     }
 }

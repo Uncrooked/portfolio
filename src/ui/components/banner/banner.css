@@ -30,10 +30,10 @@
     }
 
     #banner h1.title{
-        font-size:var(--h2-font-size);
+        font-size:var(--h3-font-size);
     }
 
     #banner div .sub-title{
-        font-size:var(--h6-font-size);
+        font-size:60px;
     }
 }

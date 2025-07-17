@@ -63,7 +63,7 @@ export default async function Page({
     return (
         <section id="single-post">
             <div className="left">
-                <h1 className={fonts.imperial.className}>{data.name}</h1>
+                <h1>{data.name}</h1>
                 <div className="tags">
                     {
                         data.tags_join.map((param,index) => 

@@ -11,7 +11,7 @@
     padding-block:var(--s-size);
     gap:var(--s-size);
     z-index:0;
-    padding-inline:max(calc((((100vw) - 1200px) / 2)),10px) ;
+    padding-inline:max(calc((((100vw) - 1300px) / 2) + 10px),10px) ;
 }
 
 .card-slider .slider-content::-webkit-scrollbar{

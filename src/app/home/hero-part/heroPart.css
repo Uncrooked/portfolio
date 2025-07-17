@@ -71,6 +71,10 @@
     #hero-part p.text{
         font-size:var(--m-font-size);
     }
+
+    #hero-part .btn{
+        padding:var(--two-xs-size);
+    }
 }
 
 /*—————————————————————————————————————————————————————————————————————————*/

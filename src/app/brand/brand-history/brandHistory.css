@@ -3,7 +3,7 @@
 }
 
 #brand-history h2{
-    margin-bottom:var(--l-size);
+    margin-bottom:var(--m-size);
     text-transform: uppercase;
     font-size:var(--h2-font-size);
 }

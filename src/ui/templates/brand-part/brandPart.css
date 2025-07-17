@@ -3,7 +3,7 @@
 }
 
 #brand-part h2{
-    margin-bottom:var(--xl-size);
+    margin-bottom:var(--m-size);
     font-size:var(--h2-font-size);
 }
 
@@ -49,4 +49,10 @@
     #brand-part .bento .bottom{
         grid-template-columns: 1fr;
     }
+}
+
+@media(max-width:425px){
+    #brand-part h2{
+        font-size:var(--h3-font-size);
+    }   
 }
